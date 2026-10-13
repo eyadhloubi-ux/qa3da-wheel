@@ -1,0 +1,10 @@
+{
+  "name": "qa3da-wheel",
+  "version": "1.0.0",
+  "description": "عجلة حياتك · قعدة صراحة — إعداد م. إياد حلوبي",
+  "main": "server.js",
+  "private": true,
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "express": "^4.21.2" }
+}

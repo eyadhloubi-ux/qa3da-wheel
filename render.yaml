@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: qa3da-wheel
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: STATS_KEY
+        generateValue: true

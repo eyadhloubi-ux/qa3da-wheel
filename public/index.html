@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عجلة حياتك · قعدة صراحة</title>
+<meta name="description" content="تقرير شخصي عن رضاك في 8 جوانب من حياتك · إعداد م. إياد حلوبي">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="عجلة حياتك">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* قعدة صراحة · عجلة حياتك — «تقرير تنفيذي» دافئ: حبر وورق، خمري للأولوية، ولكل جانب لون هادئ يعطيه روحه */
+:root{
+  --paper:#F5F1EA;--sheet:#FFFDF9;--line:#E2DCD1;--ink:#16181B;--muted:#6E6C68;--grid:rgba(22,24,27,.035);
+  --acc:#7A2E2E;--accs:rgba(122,46,46,.10);
+  --a0:#6E5677;--a1:#9E4A58;--a2:#3D5A73;--a3:#4A7357;--a4:#A35E46;--a5:#9A7330;--a6:#3B7072;--a7:#5F6340;
+  --c:var(--ink);
+  --d:"Alexandria","IBM Plex Sans Arabic",system-ui,sans-serif;--t:"IBM Plex Sans Arabic",system-ui,sans-serif;--m:"IBM Plex Mono",ui-monospace,monospace;
+  --sh:0 1px 2px rgba(22,24,27,.04),0 10px 30px -18px rgba(22,24,27,.25);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#141518;--sheet:#1C1D21;--line:#2C2E33;--ink:#ECEAE6;--muted:#9A9CA2;--grid:rgba(255,255,255,.03);--acc:#D0848F;--accs:rgba(208,132,143,.12);
+  --a0:#AB96B3;--a1:#C98A95;--a2:#8DA6BC;--a3:#8DB098;--a4:#D19A82;--a5:#C9A866;--a6:#86B3B4;--a7:#A9AD86;--sh:none;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141518;--sheet:#1C1D21;--line:#2C2E33;--ink:#ECEAE6;--muted:#9A9CA2;--grid:rgba(255,255,255,.03);--acc:#D0848F;--accs:rgba(208,132,143,.12);
+  --a0:#AB96B3;--a1:#C98A95;--a2:#8DA6BC;--a3:#8DB098;--a4:#D19A82;--a5:#C9A866;--a6:#86B3B4;--a7:#A9AD86;--sh:none;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow-x:hidden}
+body{background-color:var(--paper);color:var(--ink);font-family:var(--t);font-size:16px;line-height:1.7;min-height:100svh;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent;transition:background-color .3s,color .3s}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.ic{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.mono{font-family:var(--m);direction:ltr;unicode-bidi:isolate}
+.k{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.02em}
+
+/* خلفية حيّة: بقع لونية هادئة بلون الجانب الحالي */
+.bg{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg span{position:absolute;border-radius:50%;filter:blur(90px);opacity:.13;transition:background-color 1.2s}
+.bg .b1{width:62vmax;height:62vmax;background:var(--g1,var(--a1));top:-28vmax;right:-22vmax;animation:dr1 26s ease-in-out infinite alternate}
+.bg .b2{width:58vmax;height:58vmax;background:var(--g2,var(--a2));bottom:-30vmax;left:-24vmax;animation:dr2 32s ease-in-out infinite alternate}
+.bg .b3{width:30vmax;height:30vmax;background:var(--g3,var(--a5));top:40%;left:35%;opacity:.08;animation:dr1 22s ease-in-out infinite alternate-reverse}
+@keyframes dr1{to{transform:translate(-8vmax,10vmax) scale(1.1)}}
+@keyframes dr2{to{transform:translate(10vmax,-8vmax) scale(.9)}}
+
+.app{position:relative;z-index:1;max-width:600px;margin:0 auto;padding:0 20px 22px;min-height:100svh;display:flex;flex-direction:column}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:6px;height:60px;border-bottom:2px solid var(--ink);background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.top .tt{flex:1;text-align:center;font-size:12px;font-weight:600;color:var(--muted);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.ib{width:38px;height:38px;display:grid;place-items:center;border-radius:10px;flex:none}
+.ib:hover{background:var(--sheet)}
+.ib .ic{width:20px;height:20px}
+.ib[hidden]{display:grid;visibility:hidden}
+.help{width:auto;padding:0 12px;gap:6px;display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--sheet);font-size:13px;font-weight:600}
+.help .ic{width:18px;height:18px}
+#stage{flex:1;display:flex;flex-direction:column;padding-top:18px}
+#stage.in .mn>*,#stage.in>.cv>*{animation:rise .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.mn{display:flex;flex-direction:column;flex:1;min-width:0}
+.aside{display:none}
+.sig{text-align:center;font-size:11px;color:var(--muted);opacity:.75;padding-top:22px}
+.sig[hidden]{display:none}
+
+.cta{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;min-height:54px;padding:0 20px;border-radius:14px;background:var(--ink);color:var(--paper);font-family:var(--d);font-weight:600;font-size:16px;transition:transform .15s,opacity .2s;box-shadow:var(--sh)}
+.cta:active{transform:scale(.985)}
+.cta:disabled{opacity:.25;pointer-events:none}
+.cta .ar{font-family:var(--m);font-size:15px;opacity:.8}
+.cta .ic{width:20px;height:20px}
+.ghost{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:var(--sheet);font-weight:600;font-size:14.5px}
+.ghost .ic{width:18px;height:18px}
+.nav{margin-top:auto;padding-top:22px}
+.rule{height:2px;background:var(--ink)}
+
+/* أيقونات متحركة لكل جانب */
+.mo *{transform-box:fill-box;transform-origin:center}
+.mo .tw{animation:tw 2.6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.35;transform:scale(.7) rotate(0)}50%{opacity:1;transform:scale(1.15) rotate(25deg)}}
+.mo .rk{animation:rk 5s ease-in-out infinite}
+@keyframes rk{50%{transform:rotate(-10deg)}}
+.mo .hb{animation:hb 1.6s ease-in-out infinite}
+@keyframes hb{0%,40%,100%{transform:scale(1)}15%{transform:scale(1.14)}28%{transform:scale(1.05)}}
+.mo .pg{transform-origin:left center;animation:pg 3.2s ease-in-out infinite}
+@keyframes pg{0%,30%,100%{transform:scaleX(1)}55%{transform:scaleX(-.15)}75%{transform:scaleX(1)}}
+.mo .pl{stroke-dasharray:40;animation:pl 2.4s linear infinite}
+@keyframes pl{from{stroke-dashoffset:40}to{stroke-dashoffset:-40}}
+.mo .bo{animation:bo 2.2s ease-in-out infinite}
+@keyframes bo{0%,100%{transform:translateY(0)}45%{transform:translateY(-2px)}55%{transform:translateY(0)}65%{transform:translateY(-1px)}}
+.mo .cn{animation:cn 2.4s ease-in infinite}
+@keyframes cn{0%{transform:translateY(-6px);opacity:0}25%{opacity:1}70%{transform:translateY(4px);opacity:1}100%{transform:translateY(6px);opacity:0}}
+.mo .sw{animation:sw 3s ease-in-out infinite}
+@keyframes sw{50%{transform:translateX(-1.5px) rotate(-4deg)}}
+.mo .sw2{animation:sw 3s ease-in-out infinite reverse}
+.mo .sm{animation:sm 3s ease-out infinite}
+@keyframes sm{0%{transform:translateY(2px) scale(.6);opacity:0}40%{opacity:.9}100%{transform:translateY(-4px) scale(1.2);opacity:0}}
+
+/* الغلاف */
+.cv{display:flex;flex-direction:column;flex:1}
+.cv-meta{display:flex;justify-content:space-between}
+.cv h1{font-family:var(--d);font-weight:800;font-size:clamp(58px,17vw,82px);line-height:1.02;margin-top:18px;letter-spacing:-.01em}
+.cv h1 span{color:var(--acc)}
+.cv .lead{font-size:16.5px;font-weight:500;margin-top:14px;max-width:360px}
+.cv .by{font-size:13px;font-weight:600;color:var(--muted);margin-top:8px;display:flex;align-items:center;gap:8px}
+.cv .by::before{content:"";width:18px;height:2px;background:var(--acc)}
+.cv-w{display:flex;align-items:center;gap:16px;margin-top:20px}
+.wh{flex:none;width:min(240px,58vw);aspect-ratio:1;position:relative}
+.wh svg{width:100%;height:100%;display:block}
+.spin{transform-box:view-box;transform-origin:50% 50%;animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.br{transform-box:view-box;transform-origin:50% 50%;animation:br 5s ease-in-out infinite}
+@keyframes br{0%,100%{transform:scale(.72)}50%{transform:scale(1)}}
+.cv-l{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600}
+.cv-l span{display:flex;gap:8px;align-items:center}
+.cv-l i{width:8px;height:8px;border-radius:2px;flex:none}
+.cv-l em{font-style:normal;font-family:var(--m);color:var(--muted);font-size:11.5px}
+.tick{margin:20px -20px 0;background:var(--ink);color:var(--paper);overflow:hidden;padding:10px 0;font-size:13.5px;font-weight:500}
+.tick-in{display:flex;width:max-content;animation:mq 60s linear infinite}
+.tick-in span{white-space:nowrap;padding-inline:14px;display:inline-flex;align-items:center;gap:14px}
+.tick-in span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--acc)}
+@keyframes mq{to{transform:translateX(50%)}}
+.cv .meta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:14px 0 10px}
+
+/* شريط الأقسام */
+.secs{display:flex;gap:4px}
+.secs span{flex:1;display:flex;flex-direction:column;gap:4px}
+.secs i{height:4px;border-radius:2px;background:var(--line)}
+.secs span.d i{background:var(--sc)}
+.secs span.c i{background:var(--sc);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+.secs b{font-family:var(--m);font-size:10px;font-weight:500;color:var(--muted);direction:ltr}
+.secs span.c b{color:var(--sc)}
+
+/* الرسم */
+.h2{font-family:var(--d);font-weight:800;font-size:clamp(25px,7vw,31px);line-height:1.45;margin-top:6px}
+.hint{font-size:14px;color:var(--muted);margin-top:6px}
+.wb{width:min(380px,100%);margin:14px auto 0;touch-action:none;user-select:none;-webkit-user-select:none}
+.wb>svg{width:100%;display:block}
+.stp{display:grid;grid-template-columns:1fr 1fr;margin-top:14px;border-top:2px solid var(--ink)}
+.st{display:flex;align-items:center;gap:6px;padding:7px 2px;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.st:nth-child(odd){padding-left:12px;border-left:1px solid var(--line)}
+.st:nth-child(even){padding-right:12px}
+.st .nm{flex:1;display:flex;align-items:center;gap:7px;min-width:0}
+.st .nm i{width:8px;height:8px;border-radius:2px;flex:none}
+.st button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--sheet);display:grid;place-items:center;font-size:17px;line-height:1}
+.st b{min-width:22px;text-align:center;font-family:var(--d)}
+.st:not(.set) b{color:var(--muted)}
+
+/* بداية القسم */
+.ax-top{display:flex;justify-content:space-between;align-items:flex-end;margin-top:30px;gap:12px}
+.ax-n{font-family:var(--d);font-weight:800;font-size:clamp(110px,36vw,150px);line-height:.92;letter-spacing:-.02em;color:var(--c)}
+.ax-ic{width:clamp(96px,28vw,124px);aspect-ratio:1;border-radius:28px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 11%,var(--sheet));box-shadow:var(--sh);margin-bottom:8px;animation:float 4s ease-in-out infinite}
+.ax-ic .ic{width:58%;height:58%;stroke-width:1.4}
+@keyframes float{50%{transform:translateY(-6px)}}
+.ax-h{margin-top:16px}
+.ax-h h2{font-family:var(--d);font-weight:800;font-size:42px;line-height:1.5}
+.ax-d{color:var(--muted);font-size:15.5px;margin-top:2px}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line)}
+.kpi.k4{grid-template-columns:repeat(4,1fr)}
+.kpi div{padding:10px 0;display:flex;flex-direction:column;gap:3px;min-width:0}
+.kpi div+div{border-right:1px solid var(--line);padding-right:12px}
+.kpi b{font-family:var(--d);font-weight:800;font-size:26px;line-height:1.15}
+.kpi b.acc{color:var(--acc);font-size:19px;line-height:1.5}
+.kpi b small{font-size:14px;color:var(--muted)}
+
+/* السؤال */
+.qh{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:20px}
+.qh .ax{display:flex;align-items:center;gap:12px;min-width:0}
+.qh .qi{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--sheet));flex:none}
+.qh .qi .ic{width:28px;height:28px;stroke-width:1.5}
+.qh .ax b{display:block;font-family:var(--d);font-size:18px;font-weight:800;color:var(--c);line-height:1.3}
+.mini{display:flex;gap:3px;margin-top:6px}
+.mini i{width:13px;height:4px;border-radius:2px;background:var(--line)}
+.mini i.d{background:var(--c)}
+.mini i.c{background:var(--c);opacity:.45}
+.qn{font-family:var(--d);font-weight:800;font-size:42px;line-height:1;direction:ltr;white-space:nowrap}
+.qn small{font-size:17px;color:var(--muted)}
+.qtx{font-family:var(--d);font-weight:600;font-size:clamp(21px,6vw,26px);line-height:1.6;margin:8px 0 16px}
+.ops{display:flex;flex-direction:column;gap:8px}
+.op{display:flex;align-items:center;gap:14px;min-height:54px;padding:0 16px;border-radius:14px;border:1px solid var(--line);background:var(--sheet);font-size:16px;font-weight:500;text-align:right;width:100%;transition:border-color .2s,background .2s;box-shadow:var(--sh)}
+.op .n{font-family:var(--m);font-size:12px;color:var(--muted);width:14px}
+.op .dot{margin-inline-start:auto;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);flex:none;transition:all .2s;position:relative}
+.op:hover{border-color:color-mix(in srgb,var(--c) 45%,var(--line))}
+.op.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--sheet));font-weight:700;box-shadow:inset 0 0 0 1px var(--c)}
+.op.on .dot{border-color:var(--c);background:var(--c);animation:pop .35s ease}
+.op.on .dot::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--sheet)}
+@keyframes pop{50%{transform:scale(1.3)}}
+.pair{display:flex;flex-direction:column;gap:10px}
+.pc{display:flex;gap:12px;align-items:flex-start;width:100%;padding:16px;border-radius:16px;border:1px solid var(--line);background:var(--sheet);text-align:right;font-size:16.5px;font-weight:500;line-height:1.7;transition:border-color .2s,background .2s;box-shadow:var(--sh)}
+.pc .l{flex:none;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--line);margin-top:4px;position:relative;transition:all .2s}
+.pc.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--sheet));box-shadow:inset 0 0 0 1px var(--c)}
+.pc.on .l{background:var(--c);border-color:var(--c);animation:pop .35s ease}
+.pc.on .l::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--sheet)}
+.or{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;color:var(--muted)}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line)}
+.mid{align-self:center;display:inline-flex;align-items:center;gap:8px;padding:7px 18px;border-radius:99px;border:1px dashed var(--muted);font-size:14px;font-weight:600;color:var(--muted)}
+.mid .ic{width:16px;height:16px}
+.mid.on{border:1.5px solid var(--c);color:var(--c)}
+.qf{font-size:12px;color:var(--muted);margin-top:14px}
+
+/* الأولويات */
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.ch{position:relative;display:flex;align-items:center;gap:10px;padding:13px 12px;border-radius:14px;border:1px solid var(--line);background:var(--sheet);font-weight:600;text-align:right;width:100%;box-shadow:var(--sh);transition:all .2s}
+.ch .ic{width:22px;height:22px;color:var(--c)}
+.ch em{margin-inline-start:auto;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-style:normal;font-family:var(--d);font-weight:800;font-size:13px;border:1.5px solid var(--line);color:transparent}
+.ch.on{border-color:var(--c);background:color-mix(in srgb,var(--c) 8%,var(--sheet))}
+.ch.on em{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.ch.on.r1 em{background:var(--acc);border-color:var(--acc);color:#fff}
+
+/* الاسم والصورة */
+.fld{display:flex;flex-direction:column;gap:6px;margin-top:18px}
+.fld input{height:56px;border-radius:14px;border:1px solid var(--line);background:var(--sheet);padding:0 16px;font-size:17px;font-weight:600;outline:none}
+.fld input:focus{border-color:var(--ink)}
+.ph{display:flex;align-items:center;gap:14px}
+.pv{width:96px;height:96px;flex:none;border-radius:20px;border:1px dashed var(--muted);display:grid;place-items:center;overflow:hidden;background:var(--sheet);color:var(--muted);cursor:pointer}
+.pv.has{border:2px solid var(--ink);padding:3px}
+.pv canvas{width:100%;height:100%;display:block;border-radius:15px}
+.pv .ic{width:30px;height:30px}
+.pa{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.lnk{font-size:13px;font-weight:600;padding:6px 14px;border-radius:10px;border:1px solid var(--line);background:var(--sheet)}
+.lnk.main{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* الشريط الجانبي على الشاشات الواسعة */
+.pr-l{display:flex;flex-direction:column;gap:2px;border-top:2px solid var(--ink);margin-top:8px}
+.pr-r{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.pr-r .ic{width:22px;height:22px;color:var(--c)}
+.pr-r .bt{height:4px;border-radius:2px;background:var(--line);margin-top:5px;overflow:hidden}
+.pr-r .bt i{display:block;height:100%;background:var(--c);transition:width .4s}
+.pr-r small{font-family:var(--m);font-size:11px;color:var(--muted)}
+.pr-r.cur{color:var(--c)}
+
+/* النوافذ */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(8,9,11,.6);display:grid;place-items:center;padding:16px}
+.modal[hidden]{display:none}
+.mb{width:min(460px,100%);max-height:calc(100svh - 32px);overflow:auto;background:var(--paper);padding:22px;display:flex;flex-direction:column;gap:14px;border-radius:20px;border-top:4px solid var(--acc)}
+.mb h3{font-family:var(--d);font-weight:800;font-size:22px;line-height:1.4}
+.byl{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border-radius:14px;background:var(--sheet);border:1px solid var(--line)}
+.byl b{font-family:var(--d);font-size:15px}
+.byl span{font-size:13px;color:var(--muted)}
+.cf{position:relative;width:100%;aspect-ratio:1;overflow:hidden;border-radius:16px;background:var(--sheet);touch-action:none;direction:ltr;cursor:grab}
+.cf img{position:absolute;left:0;top:0;max-width:none;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.cf::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px rgba(255,255,255,.8);background:linear-gradient(rgba(255,255,255,.2) 1px,transparent 1px) 0 33.33%/100% 33.33%,linear-gradient(90deg,rgba(255,255,255,.2) 1px,transparent 1px) 33.33% 0/33.33% 100%;pointer-events:none}
+.zr{display:flex;align-items:center;gap:10px}
+.zr .ic{width:18px;height:18px;color:var(--muted)}
+input[type=range]{flex:1;accent-color:var(--ink)}
+.mrow{display:flex;gap:8px}
+.mrow button{flex:1;min-height:50px;border-radius:12px;font-weight:600}
+.mrow .ok{background:var(--ink);color:var(--paper)}
+.mrow .no{border:1px solid var(--line);background:var(--sheet)}
+.steps{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+.steps div{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+.steps b.n{font-family:var(--d);font-weight:800;font-size:22px;line-height:1.2;min-width:34px;direction:ltr;text-align:right;color:var(--acc)}
+.steps p{font-size:14px;color:var(--muted);line-height:1.6}
+.steps p strong{display:block;color:var(--ink);font-size:15px}
+.notes{font-size:13.5px;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.ref{font-size:13px;line-height:1.75;color:var(--muted);padding:12px 14px;border-radius:14px;border-inline-start:3px solid var(--acc);background:var(--sheet)}
+.ref b{display:block;color:var(--ink);font-size:14px}
+.ref span{direction:ltr;unicode-bidi:isolate}
+
+/* التقرير */
+.res{display:flex;flex-direction:column}
+.rh{display:flex;align-items:center;gap:14px}
+.rh .pv{width:86px;height:86px;cursor:default}
+.rh h1{font-family:var(--d);font-weight:800;font-size:clamp(28px,8vw,40px);line-height:1.3;word-break:break-word}
+.sum{display:flex;gap:16px;align-items:center;margin-top:16px}
+.sum .wbx{flex:none;width:min(190px,46vw)}
+.sum .wbx svg{width:100%;display:block}
+.sum h2{font-family:var(--d);font-weight:800;font-size:21px;line-height:1.45;margin-top:2px}
+.sum p{font-size:13.5px;color:var(--muted);line-height:1.65;margin-top:4px}
+.leg{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;font-weight:600;color:var(--muted);margin-top:10px}
+.leg span{display:inline-flex;align-items:center;gap:6px}
+.leg i{width:16px;height:8px;border-radius:2px;background:linear-gradient(90deg,var(--a0),var(--a2),var(--a3),var(--a5))}
+.leg i.f{background:none;border-top:2px dashed var(--ink);height:0;border-radius:0}
+.leg i.a{background:none;border:2px solid var(--acc)}
+.sh{font-family:var(--d);font-weight:800;font-size:19px;margin:30px 0 8px;display:flex;align-items:baseline;gap:10px}
+.sh{flex-wrap:wrap;row-gap:2px}
+.sh small{font-family:var(--t);font-size:12px;color:var(--muted);font-weight:600;flex-basis:100%}
+.bars{border-top:2px solid var(--ink)}
+.bar{display:grid;grid-template-columns:96px 1fr 74px;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.bar .nm{display:flex;align-items:center;gap:7px}
+.bar .nm .ic{width:18px;height:18px;color:var(--c)}
+.bar .t{position:relative;height:10px;border-radius:3px;background:color-mix(in srgb,var(--c) 12%,transparent)}
+.bar .t i{display:block;height:100%;width:0;border-radius:3px;background:var(--c);transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.bar .t u{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--ink);border-radius:1px}
+.bar .v{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25;direction:ltr}
+.bar .v b{font-family:var(--m);font-weight:500;font-size:14px}
+.bar .v small{font-size:11px;color:var(--muted);font-weight:600;direction:rtl}
+.bar.p .nm{color:var(--acc)}
+.bar.p .nm::after{content:"الأولوية";font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:99px;background:var(--accs);color:var(--acc)}
+.ins{display:flex;flex-direction:column;gap:12px}
+.in2{padding:14px 16px;border-radius:16px;background:var(--sheet);border:1px solid var(--line);border-inline-start:4px solid var(--c);box-shadow:var(--sh)}
+.in2 h4{font-family:var(--d);font-weight:800;font-size:18px;line-height:1.5;margin-top:2px;display:flex;align-items:center;gap:8px}
+.in2 h4 .ic{width:22px;height:22px;color:var(--c)}
+.in2 p{font-size:15px;line-height:1.75}
+.tips{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.tips div{display:flex;gap:10px;font-size:14.5px;line-height:1.65}
+.tips b{font-family:var(--m);font-weight:500;color:var(--c);font-size:12px;margin-top:4px;direction:ltr}
+.match{display:flex;align-items:center;gap:14px;margin-top:6px}
+.ring{width:84px;height:84px;border-radius:50%;flex:none;display:grid;place-items:center;background:conic-gradient(var(--acc) calc(var(--v)*1%),var(--line) 0);position:relative}
+.ring::before{content:"";position:absolute;inset:7px;border-radius:50%;background:var(--sheet)}
+.ring b{position:relative;font-family:var(--d);font-size:21px;direction:ltr}
+.story{display:flex;flex-direction:column;gap:12px}
+.lays{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ly{display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px;border-radius:14px;border:1px solid var(--line);background:var(--sheet);font-size:13px;font-weight:600}
+.ly canvas{width:100%;aspect-ratio:9/16;display:block;border-radius:6px;background:var(--line)}
+.ly.on{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.tgl{display:flex;padding:3px;border-radius:12px;border:1px solid var(--line);background:var(--sheet)}
+.tgl button{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;border-radius:9px;font-weight:600;font-size:14px;color:var(--muted)}
+.tgl button .ic{width:17px;height:17px}
+.tgl button.on{background:var(--ink);color:var(--paper)}
+.prev{width:min(290px,76vw);margin:4px auto 0}
+.prev canvas{width:100%;aspect-ratio:9/16;display:block;border-radius:12px;box-shadow:0 18px 40px -18px rgba(0,0,0,.45)}
+.acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.acts .ghost{flex:1;min-width:140px}
+.acts .sv{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.inst{display:flex;align-items:center;gap:14px;margin-top:26px;padding:16px;border-radius:18px;background:var(--sheet);border:1px solid var(--line);box-shadow:var(--sh)}
+.inst .ico{width:54px;height:54px;flex:none;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.inst .ico canvas{width:100%;height:100%;display:block}
+.inst b{display:block;font-family:var(--d);font-size:16px}
+.inst span{font-size:13px;color:var(--muted)}
+.inst .ghost{margin-inline-start:auto;flex:none;min-height:40px}
+.restart{align-self:center;display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:14px;font-weight:600;color:var(--muted)}
+.restart .ic{width:16px;height:16px}
+.rf{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:12px;border-top:2px solid var(--ink);font-size:13px;font-weight:600}
+.toast{position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:12px;font-size:14px;font-weight:600;z-index:60;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.on{opacity:1}
+.os{display:flex;flex-direction:column;gap:8px}
+.os div{padding:12px 14px;border-radius:14px;background:var(--sheet);border:1px solid var(--line);font-size:14px;line-height:1.65}
+.os div b{display:block;font-family:var(--d);font-size:14.5px}
+.os div.me{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+
+/* التابلت */
+@media (min-width:640px){
+  .app{max-width:680px;padding:0 32px 26px}
+  .tick{margin:20px -32px 0}
+  .qtx{font-size:27px}
+  .chips{grid-template-columns:repeat(4,1fr)}
+  .ch{flex-direction:column;align-items:flex-start}
+  .ch em{position:absolute;top:10px;left:10px}
+  body{font-size:17px}.k{font-size:13px}.top .tt{font-size:13.5px}
+  .h2{font-size:36px}.hint{font-size:16px}
+  .ax-h h2{font-size:52px}.ax-d{font-size:18px}.kpi b{font-size:32px}.kpi b.acc{font-size:22px}
+  .qh .qi{width:62px;height:62px}.qh .ax b{font-size:21px}.qn{font-size:50px}
+  .qtx{font-size:30px}.op{min-height:62px;font-size:18px}.pc{font-size:18px;padding:20px}.qf{font-size:13.5px}
+  .rh h1{font-size:44px}.sum h2{font-size:24px}.sum p{font-size:15px}.bar{font-size:15.5px;padding:11px 0}.in2 p{font-size:16px}
+}
+/* اللابتوب */
+@media (min-width:1000px){
+  .app{max-width:1120px;padding:0 40px 30px}
+  .tick{margin:24px 0 0;border-radius:12px}
+  #stage.two{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:56px;align-items:start}
+  .aside{display:flex;flex-direction:column;gap:10px;position:sticky;top:84px}
+  .aside .wb2{width:220px;margin:4px auto 6px}
+  .aside .wb2 svg{width:100%;display:block}
+  .cv{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;align-items:center}
+  .cv .cvl{grid-column:1}.cv .cvr{grid-column:2;grid-row:1/3}
+  .cv .cvb{grid-column:1/-1}
+  .cv-w{flex-direction:column;align-items:center;margin-top:0}
+  .cv .wh{width:400px}
+  .cv-l{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px 14px}
+  .res.two{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:56px;align-items:start}
+  .res.two .rs{position:sticky;top:84px}
+  .res .rs .sh:first-child{margin-top:0}
+}
+/* الشاشات الضيقة جداً */
+@media (max-width:380px){.app{padding:0 14px 20px}.tick{margin:20px -14px 0}.st{font-size:13px;gap:4px}.st button{width:26px;height:26px}.st:nth-child(odd){padding-left:6px}.st:nth-child(even){padding-right:6px}.kpi.k4 b{font-size:22px}.bar{grid-template-columns:84px 1fr 66px;gap:8px}}
+/* أنماط التصميم */
+.axp{margin-top:0}
+:root[data-skin="bold"] .axp{background:var(--c);color:#fff;border-radius:26px;padding:4px 20px 20px;margin-top:20px;box-shadow:0 22px 40px -26px var(--c)}
+:root[data-skin="bold"] .axp .k{color:rgba(255,255,255,.75)}
+:root[data-skin="bold"] .axp .ax-n{color:#fff}
+:root[data-skin="bold"] .axp .ax-ic{background:rgba(255,255,255,.16);color:#fff;box-shadow:none}
+:root[data-skin="bold"] .qh .qi{background:var(--c);color:#fff}
+:root[data-skin="bold"] .op.on,:root[data-skin="bold"] .pc.on{background:var(--c);color:#fff;box-shadow:none}
+:root[data-skin="bold"] .op.on .n{color:rgba(255,255,255,.8)}
+:root[data-skin="bold"] .op.on .dot,:root[data-skin="bold"] .pc.on .l{border-color:#fff;background:#fff}
+:root[data-skin="bold"] .op.on .dot::after,:root[data-skin="bold"] .pc.on .l::after{background:var(--c)}
+:root[data-skin="bold"] .cta{background:var(--acc);color:#fff}
+:root[data-skin="sand"] .op,:root[data-skin="sand"] .pc,:root[data-skin="sand"] .ch,:root[data-skin="sand"] .in2,:root[data-skin="sand"] .cta{border-radius:22px}
+:root[data-skin="sand"] .ax-ic{border-radius:50%}
+:root[data-skin="sand"] .qh .qi{border-radius:50%}
+:root[data-skin="sand"] .bg span{opacity:.2}
+:root[data-skin="navy"] .rule,:root[data-skin="navy"] .top{border-color:var(--acc)}
+:root[data-skin="navy"] .cv h1 span{color:var(--acc)}
+/* شريط المعاينة السريعة */
+.demo{position:fixed;bottom:14px;left:14px;z-index:40;display:flex;flex-direction:column;gap:6px;align-items:flex-start;max-width:calc(100vw - 28px)}
+.demo[hidden]{display:none}
+.demo .pill{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:99px;background:var(--acc);color:#fff;font-size:13px;font-weight:700;box-shadow:0 10px 24px -12px rgba(0,0,0,.5)}
+.demo .box{display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:16px;background:var(--sheet);border:1px solid var(--line);box-shadow:0 18px 40px -18px rgba(0,0,0,.45);width:260px}
+.demo .box[hidden]{display:none}
+.demo .box b{font-size:12px;color:var(--muted)}
+.demo .row{display:flex;flex-wrap:wrap;gap:6px}
+.demo .row button{padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:var(--paper);font-size:12.5px;font-weight:600}
+.demo .row button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.demo .row button.go{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
+<div class="app" id="app">
+  <header class="top">
+    <button class="ib help" id="help" aria-label="التعليمات"></button>
+    <button class="ib" id="back" aria-label="رجوع" hidden></button>
+    <span class="tt" id="tt">قعدة صراحة — تقرير</span>
+    <button class="ib" id="thm" aria-label="الوضع الفاتح أو الداكن"></button>
+  </header>
+  <main id="stage"></main>
+  <p class="sig" id="sig" hidden>إعداد م. إياد حلوبي</p>
+</div>
+
+<div class="modal" id="hlp" hidden>
+  <div class="mb" role="dialog" aria-label="التعليمات">
+    <div class="byl"><b>إعداد م. إياد حلوبي</b><span>ضمن مشروع «قعدة» · قعدة صراحة</span></div>
+    <h3>كيف يعمل التقرير؟</h3>
+    <div class="steps">
+      <div><b class="n">01</b><p><strong>ارسم عجلتك</strong>حدّد رضاك عن كل جانب كما تشعر به الآن، من 1 إلى 10. اسحب داخل العجلة أو استخدم الأزرار.</p></div>
+      <div><b class="n">02</b><p><strong>أجب عن أسئلة كل جانب</strong>ثمانية أقسام، قسم بعد قسم. اختر الأقرب إليك، وينتقل السؤال وحده.</p></div>
+      <div><b class="n">03</b><p><strong>اختر أولوياتك</strong>جانبان تريد أن تعمل عليهما في هذه الفترة: الأول هو الأهم.</p></div>
+      <div><b class="n">04</b><p><strong>استلم تقريرك</strong>اسمك وصورتك اختياريان، ثم يظهر تقريرك ونسبة التطابق بين إحساسك وواقعك، وصورة الستوري لتحفظها أو تشاركها.</p></div>
+    </div>
+    <div class="notes">
+      <span>· أجب كما أنت فعلاً، لا كما تتمنى أن تكون.</span>
+      <span>· لا توجد إجابة صحيحة أو خاطئة.</span>
+      <span>· يمكنك الرجوع لأي سؤال وتعديل إجابتك.</span>
+    </div>
+    <div class="ref"><b>عن عجلة الحياة</b>أداة كوتشينغ ابتكرها <span>Paul J. Meyer</span>، مؤسس معهد <span>Success Motivation Institute</span>، في ستينيات القرن الماضي، وما زالت تُستخدم في التدريب والتخطيط الشخصي. تقيس الرضا لا الكفاءة، ونتيجتها للتأمل والتخطيط لا للتشخيص.<br>للاستزادة: <span>MindTools · The Wheel of Life</span>، و<span>PositivePsychology.com · Wheel of Life</span>.</div>
+    <div class="mrow"><button class="ok" id="hok">فهمت</button></div>
+  </div>
+</div>
+
+<div class="modal" id="ins" hidden>
+  <div class="mb" role="dialog" aria-label="تثبيت التطبيق">
+    <h3>ثبّت «عجلة حياتك» على جهازك</h3>
+    <p class="hint" style="margin:0">يصبح التطبيق أيقونة على شاشتك، ويفتح بسرعة مثل أي تطبيق.</p>
+    <div class="os" id="osl"></div>
+    <div class="mrow"><button class="ok" id="iok">تمام</button></div>
+  </div>
+</div>
+
+<div class="modal" id="crop" hidden>
+  <div class="mb" role="dialog" aria-label="قص الصورة">
+    <h3>اضبط صورتك</h3>
+    <div class="cf" id="cf"><img id="ci" alt=""></div>
+    <div class="zr"><span id="zo"></span><input type="range" id="cz" min="0" max="1000" value="0" aria-label="التكبير"><span id="zi"></span></div>
+    <p class="hint" style="margin:0">اسحب الصورة في أي اتجاه، وكبّرها أو صغّرها بإصبعين أو بالشريط.</p>
+    <div class="mrow"><button class="no" id="cno">إلغاء</button><button class="ok" id="cok">تم</button></div>
+  </div>
+</div>
+<input type="file" id="file" accept="image/*" hidden>
+<div class="toast" id="toast"></div>
+<div class="demo" id="demo" hidden></div>
+
+<script>
+"use strict";
+const IG = "https://www.instagram.com/eyad.hloubi/";
+
+/* ============ الجوانب: لكل جانب لون وأيقونة متحركة ============ */
+const AX = [
+ {n:"روحي", d:"علاقتك بربّك، وقيمك، وأخلاقك مع الناس.", i:'<g class="rk"><path d="M13.8 3.6a8.6 8.6 0 1 0 6.2 14.8 9.6 9.6 0 0 1-6.2-14.8Z"/></g><path class="tw" d="m17.8 4.2.72 1.88 1.88.72-1.88.72-.72 1.88-.72-1.88-1.88-.72 1.88-.72z"/>',
+  tips:["ثبّت ورداً صغيراً في وقت لا يتغيّر، ولو صفحة واحدة بعد الفجر.","اختر عادة واحدة تريد تركها هذا الشهر، وضع لها بديلاً عملياً."]},
+ {n:"نفسي", d:"مزاجك، وطريقة تعاملك مع الضغط والمشاعر.", i:'<path class="hb" d="M12 19.8S4.2 15.2 4.2 9.9a4.2 4.2 0 0 1 7.8-2.1 4.2 4.2 0 0 1 7.8 2.1c0 5.3-7.8 9.9-7.8 9.9Z"/>',
+  tips:["خصّص ربع ساعة يومياً لراحة حقيقية بعيداً عن الشاشات.","عندما تشعر بالضغط، اكتب ما تشعر به بدل أن تكتمه."]},
+ {n:"عقلي", d:"قراءتك، وتعلّمك، وطريقة تفكيرك.", i:'<path d="M12 7.2v12"/><path d="M12 7.2C10.4 5.9 8.4 5.3 5.6 5.3H3.4v12h2.2c2.8 0 4.8.6 6.4 1.9"/><path class="pg" d="M12 7.2c1.6-1.3 3.6-1.9 6.4-1.9h2.2v12h-2.2c-2.8 0-4.8.6-6.4 1.9"/>',
+  tips:["اقرأ عشر دقائق يومياً في وقت ثابت، وابدأ بكتاب قصير تحبه.","اختر دورة قصيرة واحدة وأنهِها قبل أن تبدأ غيرها."]},
+ {n:"صحي", d:"نومك، وطعامك، وحركتك، وطاقتك.", i:'<path d="M3 12.6h3.9l1.9-5 3 8.8 2.3-6.1 1.2 2.3H21" opacity=".25"/><path class="pl" d="M3 12.6h3.9l1.9-5 3 8.8 2.3-6.1 1.2 2.3H21"/>',
+  tips:["ثبّت موعد نومك واستيقاظك، وخفّف السهر تدريجياً.","امشِ عشرين دقيقة ثلاث مرات في الأسبوع على الأقل."]},
+ {n:"مهني", d:"عملك أو دراستك، وتطوّرك، وطموحك.", i:'<g class="bo"><rect x="2.8" y="7.4" width="18.4" height="12.2" rx="2.4"/><path d="M8.6 7.4V5.6a2 2 0 0 1 2-2h2.8a2 2 0 0 1 2 2v1.8"/><path d="M2.8 12.4h18.4"/></g>',
+  tips:["حدّد هدفاً مهنياً واحداً واضحاً للأشهر الستة القادمة.","خصّص ساعة أسبوعياً لمهارة مطلوبة في مجالك، وحدّث سيرتك الذاتية."]},
+ {n:"مالي", d:"دخلك، ومصروفك، وأمانك المادي.", i:'<rect x="2.8" y="8.6" width="18.4" height="11.4" rx="2.4"/><path d="M2.8 12.4h18.4"/><circle class="cn" cx="12" cy="5" r="2"/>',
+  tips:["سجّل مصاريفك شهراً كاملاً لتعرف أين يذهب دخلك.","اقتطع نسبة ثابتة للادخار أول الشهر، ولو 5%."]},
+ {n:"اجتماعي", d:"أصدقاؤك، ومعارفك، وحضورك بين الناس.", i:'<g class="sw"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 19.6c0-3.4 2.8-5.6 6.2-5.6s6.2 2.2 6.2 5.6"/></g><g class="sw2"><path d="M16.4 5.2a3.2 3.2 0 0 1 0 6.2"/><path d="M17.6 14.4c2.2.6 3.6 2.4 3.6 5.2"/></g>',
+  tips:["تواصل مع صديق واحد كل أسبوع، ولو برسالة.","احضر نشاطاً أو لقاءً واحداً في الشهر على الأقل."]},
+ {n:"عائلي", d:"أهلك، وبيتك، وصلة رحمك.", i:'<path d="M3.6 10.4 12 3.6l8.4 6.8v8.4a1.8 1.8 0 0 1-1.8 1.8H5.4a1.8 1.8 0 0 1-1.8-1.8v-8.4Z"/><path class="hb" d="M12 17.6s-3-1.8-3-3.9a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 2.1-3 3.9-3 3.9Z"/>',
+  tips:["خصّص وقتاً عائلياً ثابتاً كل أسبوع بلا هواتف.","لا تترك الخلاف يتراكم؛ ناقشه بهدوء أولاً بأول."]}
+];
+const ICO = {
+ back:'<path d="M9 5l7 7-7 7"/>',
+ help:'<circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.8"/><path d="M12 17.2h.01"/>',
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.8v2M12 19.2v2M2.8 12h2M19.2 12h2M5.5 5.5l1.4 1.4M17.1 17.1l1.4 1.4M5.5 18.5l1.4-1.4M17.1 6.9l1.4-1.4"/>',
+ moon:'<path d="M19.6 14.6A8 8 0 1 1 9.4 4.4a6.4 6.4 0 0 0 10.2 10.2Z"/>',
+ cam:'<path d="M4 8.2h3l1.6-2.4h6.8L17 8.2h3v10.6H4Z"/><circle cx="12" cy="13.2" r="3.4"/>',
+ eq:'<path d="M5 9.5h14M5 14.5h14"/>',
+ dl:'<path d="M12 4v11M7.4 10.6 12 15.2l4.6-4.6M5 19.6h14"/>',
+ share:'<circle cx="17.6" cy="5.6" r="2.4"/><circle cx="6.4" cy="12" r="2.4"/><circle cx="17.6" cy="18.4" r="2.4"/><path d="m8.5 10.8 7-4M8.5 13.2l7 4"/>',
+ redo:'<path d="M19 12a7 7 0 1 1-2.1-5M19.2 3.8v4h-4"/>',
+ minus:'<circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M8 11h6"/>',
+ plus:'<circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M8 11h6M11 8v6"/>',
+ star:'<path d="m12 3.6 2.5 5.2 5.7.8-4.1 4 1 5.6L12 16.5l-5.1 2.7 1-5.6-4.1-4 5.7-.8z"/>',
+ flag:'<path d="M5.5 21V4"/><path d="M5.5 4.6h11l-2.2 3.7 2.2 3.7h-11"/>',
+ mirror:'<path d="M12 3.6v16.8"/><path d="M8.6 7.2 4 12l4.6 4.8M15.4 7.2 20 12l-4.6 4.8"/>',
+ phone:'<rect x="7" y="2.8" width="10" height="18.4" rx="2.2"/><path d="M11 18h2"/>'
+};
+const ic = (inner, s="") => `<svg viewBox="0 0 24 24" class="ic" ${s} aria-hidden="true">${inner}</svg>`;
+const mic = a => `<svg viewBox="0 0 24 24" class="ic mo" aria-hidden="true">${AX[a].i}</svg>`;
+const SCALE = ["لا يشبهني أبداً","قليلاً","إلى حدّ ما","كثيراً","يشبهني تماماً"];
+const p2 = n => String(n).padStart(2,"0");
+const cv = i => `var(--a${i})`;
+
+/* ============ الأسئلة: مقسومة على الجوانب. r:1 = معكوس. pair: A يرفع، B ينزّل ============ */
+const RAW = [
+ [ // روحي
+  {t:"like",q:"لديّ وقت ثابت في يومي لنفسي ولربّي، لا تأخذه الانشغالات الأخرى."},
+  {t:"like",q:"أشعر أن صلاتي فيها حضور، وليست مجرد حركات أؤديها."},
+  {t:"like",r:1,q:"تمرّ عليّ أيام كاملة دون أن أفتح المصحف أو أذكر الله بقلب حاضر."},
+  {t:"pair",A:"عندما تصيبني مصيبة، أسلّم أمري لله وأهدأ تدريجياً.",B:"عندما تصيبني مصيبة، يبقى بالي مشغولاً حتى تنحلّ وحدها."},
+  {t:"like",q:"أحرص على النوافل أو عبادات إضافية بعد الفرض، ولو بشيء بسيط."},
+  {t:"like",r:1,q:"هناك عادة أو خطأ يتكرر معي، ولا أعمل جدّياً على تركه."},
+  {t:"like",q:"أحرص على جبر خاطر أحد أو مساعدته، دون أن يعلم أحد."},
+  {t:"pair",A:"إذا أخطأت في حق أحد، لا أرتاح حتى أصلح الموقف.",B:"إذا أخطأت في حق أحد، أقول لنفسي إن الأمر سيمضي مع الوقت."},
+  {t:"like",q:"يترك حضوري أثراً روحياً طيباً في من حولي، ويقرّبهم من الخير."},
+  {t:"like",q:"الجانب الروحي هو الأساس الذي أبني عليه بقية جوانب حياتي."}
+ ],
+ [ // نفسي
+  {t:"like",q:"عندما أكون تحت الضغط، أعرف ما الذي يعيدني إلى توازني."},
+  {t:"like",r:1,q:"أكتم ما يزعجني حتى يخرج فجأة في موقف لا علاقة له."},
+  {t:"pair",A:"في نهاية الأسبوع أشعر أنني استعدت شيئاً من طاقتي.",B:"في نهاية الأسبوع أشعر أنني أتعب مما كنت في بدايته."},
+  {t:"like",q:"لديّ شخص واحد على الأقل أستطيع أن أحدّثه بأي شيء دون خوف من حكمه."},
+  {t:"like",q:"هناك أشياء أفعلها لأنها تسعدني فقط، لا لأنها مطلوبة مني."},
+  {t:"like",r:1,q:"موقف صغير في الصباح قادر على أن يفسد مزاجي طوال اليوم."},
+  {t:"like",q:"أستطيع أن أقول «لا» دون أن أشعر بذنب كبير."},
+  {t:"pair",A:"عندما أخطئ، أحدّث نفسي كما أحدّث صديقاً.",B:"عندما أخطئ، أبقى ألوم نفسي وأستعيد الموقف في ذهني."},
+  {t:"like",q:"أنشر طاقة إيجابية في أي مكان أكون فيه."},
+  {t:"like",q:"أنا متفائل في العموم، ونادراً ما يتسلل إليّ اليأس."}
+ ],
+ [ // عقلي
+  {t:"like",q:"في الشهر الأخير قرأت أو سمعت شيئاً جديداً غيّر طريقة تفكيري في موضوع ما."},
+  {t:"like",r:1,q:"معظم معلوماتي تأتيني من وسائل التواصل دون أن أتحقق من مصدرها."},
+  {t:"pair",A:"عندما يشغلني موضوع، أبحث فيه بعمق حتى أُشبع فضولي.",B:"عندما يشغلني موضوع، أكتفي بسؤال أحدهم عنه."},
+  {t:"like",q:"أتعلّم شيئاً جديداً حالياً خارج عملي أو دراستي."},
+  {t:"like",q:"أتابع ما يجري في العالم من حولي، لا في مجالي فقط."},
+  {t:"pair",A:"ألتحق بدورات بشكل دوري، وأتابعها أولاً بأول حتى أُنهيها.",B:"أسجّل في دورات بحماس، ثم تتراكم عليّ ولا أكملها."},
+  {t:"like",q:"أستطيع أن أفتح نقاشاً قائماً على الفكر والحقائق، وأشدّ الناس إلى حديثي."},
+  {t:"pair",A:"القراءة عادة ثابتة عندي، ودائماً هناك كتاب أقرؤه.",B:"أقرأ حين يتسنّى لي الوقت، وقد تمضي شهور دون كتاب."}
+ ],
+ [ // صحي
+  {t:"like",r:1,q:"أنام في أوقات مختلفة كل يوم، وأستيقظ متعباً في معظم الأيام."},
+  {t:"like",q:"أمشي بانتظام خلال الأسبوع."},
+  {t:"pair",A:"عندما أجوع، أختار غالباً طعاماً يُشبعني ويفيدني.",B:"عندما أجوع، آكل غالباً أول ما يكون أمامي."},
+  {t:"like",q:"أجري فحصاً طبياً شاملاً بشكل دوري."},
+  {t:"like",q:"أنا معتدل في طعامي، وأختار الأكل الصحي في الغالب."},
+  {t:"like",q:"أمارس الرياضة بانتظام."},
+  {t:"like",q:"أنا راضٍ عن مستوى طاقتي خلال النهار."},
+  {t:"pair",A:"إذا شعرت بألم مستمر، أراجع الطبيب في وقته.",B:"إذا شعرت بألم مستمر، أنتظر حتى يزول وحده."},
+  {t:"like",q:"أنا راضٍ عن وزني ولياقتي."}
+ ],
+ [ // مهني
+  {t:"like",q:"العمل الذي أقوم به، أو ما أدرسه، يستثمر قدراتي الحقيقية."},
+  {t:"like",r:1,q:"مضت فترة طويلة دون أن أتعلّم شيئاً جديداً في مجالي."},
+  {t:"like",q:"أعرف بدقة ما أريد أن أعمل عليه في المرحلة القادمة."},
+  {t:"like",q:"أتعلّم أدوات الذكاء الاصطناعي وأتدرّب عليها حتى أتقنها."},
+  {t:"like",q:"أشعر أنني أتطوّر وأكتسب خبرة جديدة."},
+  {t:"like",q:"لديّ شبكة علاقات جيدة في مجال العمل."},
+  {t:"like",q:"لديّ سيرة ذاتية قوية، وإنجازات موثّقة أستطيع أن أعرضها."},
+  {t:"pair",A:"لديّ فكرة مشروع أو مصدر دخل خاص، وأعمل عليها ولو ببطء.",B:"لديّ أفكار كثيرة، لكنها كلها ما زالت في رأسي."},
+  {t:"like",q:"أنا حاضر وفعّال على منصات العمل المهنية مثل LinkedIn."},
+  {t:"like",q:"لغتي الإنكليزية جيدة، وأستطيع العمل بها."}
+ ],
+ [ // مالي
+  {t:"like",q:"أعرف تقريباً أين ذهب مصروفي في الشهر الماضي."},
+  {t:"like",r:1,q:"إذا انقطع دخلي فجأة، فليس لديّ ما يكفيني ولو شهراً واحداً."},
+  {t:"pair",A:"فور وصول المصروف أو الراتب، أضع جزءاً منه جانباً.",B:"أصرف بشكل عادي، وأرى إن بقي شيء في آخر الشهر."},
+  {t:"like",r:1,q:"كثيراً ما أشتري أشياء في لحظتها ثم أندم عليها."},
+  {t:"like",q:"مصروفي الأساسي مغطّى دون أن أستدين."},
+  {t:"like",q:"أبحث عن مصدر دخل إضافي أو أعمل عليه."},
+  {t:"like",q:"لديّ خطة مالية مكتوبة وأهداف واضحة أسير عليها."},
+  {t:"like",q:"لديّ مدّخرات جيدة في الفترة الحالية."},
+  {t:"like",q:"أملك أصولاً جيدة يمكن استثمارها."}
+ ],
+ [ // اجتماعي
+  {t:"like",q:"إذا وقعت في مشكلة في الثانية ليلاً، لديّ من أستطيع الاتصال به."},
+  {t:"like",q:"ألتقي بأصدقائي بشكل دوري."},
+  {t:"like",q:"أنا مبادر في العموم، وأعرف كيف أفتح حديثاً مع الناس."},
+  {t:"like",q:"عندما يحدث خلاف بيني وبين أحد، أعرف كيف أناقشه دون أن تتضرر العلاقة."},
+  {t:"like",q:"حضوري على وسائل التواصل جيد وفعّال، وأتواصل من خلالها بشكل حقيقي."},
+  {t:"like",q:"لديّ أنشطة ولقاءات منتظمة، وأحضر المناسبات."},
+  {t:"like",q:"لديّ دائرة معارف واسعة، وأنا معروف بين الناس."},
+  {t:"pair",A:"وقتي على وسائل التواصل يقرّبني من أشخاص أحبهم.",B:"وقتي على وسائل التواصل يجعلني أقارن نفسي بالآخرين."},
+  {t:"like",q:"يحب الناس الخروج معي والجلوس في صحبتي."}
+ ],
+ [ // عائلي
+  {t:"like",q:"لديّ جلسات حديث يومية مع أهلي."},
+  {t:"like",q:"لديّ أنشطة دورية أشارك فيها أهلي."},
+  {t:"pair",A:"عندما يحدث خلاف في البيت، نجلس ونتحدث فيه.",B:"عندما يحدث خلاف في البيت، يسكت كل واحد ونكمل كأن شيئاً لم يحدث."},
+  {t:"like",q:"أتواصل مع أقاربي حتى دون مناسبة."},
+  {t:"like",q:"أشعر أن أهلي سند لي في وقت الضيق."},
+  {t:"like",q:"أعرف ما يشغل بال كل فرد من أهلي هذه الفترة."},
+  {t:"like",r:1,q:"أغيب عن المناسبات العائلية في معظم الأحيان."},
+  {t:"pair",A:"عندما يحتاجني أحد من أهلي، أكون أول من يصل.",B:"عندما يحتاجني أحد من أهلي، أساعد إن كان لديّ وقت."},
+  {t:"like",q:"أحرص على برّ والديّ بشكل دائم."},
+  {t:"like",q:"علاقتي بإخوتي جيدة، ونحن على تواصل دائم."}
+ ]
+];
+const Q = [], AXQ = AX.map(()=>[]);
+RAW.forEach((list,a)=>list.forEach(q=>{AXQ[a].push(Q.length);Q.push({...q,a})}));
+const MIN = Math.round(Q.length*7/60);
+
+const TYPES = [
+ {t:"عجلة متوازنة ومتينة", d:"حياتك تسير بسلاسة، والجوانب تسند بعضها. راجع عجلتك كل فترة لتبقى على هذا التوازن."},
+ {t:"عجلة قوية فيها نقطة ضعف", d:"أغلب جوانبك في وضع جيد، لكن هناك جانباً يُبطئ المسير. اضبطه، وسيصبح الطريق أسهل بكثير."},
+ {t:"عجلة متوازنة تحتاج دفعة", d:"جوانبك متقاربة وهذا أمر جيد، لكنها كلها تحتاج دفعة. خطوة صغيرة في أي جانب ترفع الجميع."},
+ {t:"عجلة تحتاج إعادة ضبط", d:"في الطريق مطبّات هذه الفترة، وهذا يحدث مع الجميع. ابدأ بجانب واحد، والبقية ستلحق."}
+];
+const MONTHS=["كانون الثاني","شباط","آذار","نيسان","أيار","حزيران","تموز","آب","أيلول","تشرين الأول","تشرين الثاني","كانون الأول"];
+const NOW=new Date(), DATE=`${NOW.getDate()}.${NOW.getMonth()+1}.${NOW.getFullYear()}`;
+
+/* ============ أنماط التصميم (ألوان الواجهة وصورة الستوري) ============ */
+const SKINS={
+ warm:{name:"ورق ودفء",L:{paper:"#F5F1EA",sheet:"#FFFDF9",line:"#E2DCD1",ink:"#16181B",muted:"#6E6C68",acc:"#7A2E2E"},D:{paper:"#141518",sheet:"#1C1D21",line:"#2C2E33",ink:"#ECEAE6",muted:"#9A9CA2",acc:"#D0848F"}},
+ navy:{name:"كحلي ونحاسي",L:{paper:"#EEF1F4",sheet:"#FFFFFF",line:"#D9DFE6",ink:"#14202E",muted:"#5F6B78",acc:"#A8652F"},D:{paper:"#0F151C",sheet:"#18202A",line:"#263140",ink:"#E8ECF0",muted:"#93A0AE",acc:"#D9A06C"}},
+ sand:{name:"رمل وطين",L:{paper:"#EDE4D6",sheet:"#FAF5EC",line:"#DDD0BC",ink:"#2B231D",muted:"#75685B",acc:"#A24B2A"},D:{paper:"#1A1613",sheet:"#241F1B",line:"#352D26",ink:"#F0E8DD",muted:"#A89A8B",acc:"#E08A63"}},
+ bold:{name:"أبيض جريء",L:{paper:"#FFFFFF",sheet:"#F6F6F4",line:"#E6E5E1",ink:"#0E0E10",muted:"#6A6A6E",acc:"#1F5E54"},D:{paper:"#0E0F11",sheet:"#18191C",line:"#2A2B2F",ink:"#F2F1EE",muted:"#9B9BA0",acc:"#6BC1AE"}}
+};
+const AXL=["#6E5677","#9E4A58","#3D5A73","#4A7357","#A35E46","#9A7330","#3B7072","#5F6340"],AXD=["#AB96B3","#C98A95","#8DA6BC","#8DB098","#D19A82","#C9A866","#86B3B4","#A9AD86"];
+let SKIN="bold";
+function applySkin(k){
+  if(!SKINS[k])return;SKIN=k;document.documentElement.dataset.skin=k;
+  const v=o=>`--paper:${o.paper};--sheet:${o.sheet};--line:${o.line};--ink:${o.ink};--muted:${o.muted};--acc:${o.acc};--accs:${o.acc}1F`;
+  const sel=`:root[data-skin="${k}"]`;
+  let el=document.getElementById("skin");if(!el){el=document.createElement("style");el.id="skin";document.head.appendChild(el)}
+  el.textContent=`${sel}{${v(SKINS[k].L)}}@media (prefers-color-scheme:dark){${sel}:not([data-theme="light"]){${v(SKINS[k].D)}}}${sel}[data-theme="dark"]{${v(SKINS[k].D)}}`;
+  if(typeof paintTheme==="function")paintTheme();
+}
+/* ============ المعاينة السريعة: ?demo=1 ============ */
+const DEMO=new URLSearchParams(location.search).get("demo")==="1"||window.__DEMO===true;
+const rnd=n=>Math.floor(Math.random()*n);
+function fillAxis(a){AXQ[a].forEach(i=>{if(S.ans[i]===undefined)S.ans[i]=Q[i].t==="like"?Math.min(4,rnd(3)+rnd(3)):["A","A","M","B"][rnd(4)]})}
+function demoToEnd(){
+  if(STEPS.length<3)newRun();
+  S.gut=S.gut.map(v=>v||3+rnd(7));AX.forEach((_,a)=>fillAxis(a));
+  if(!S.imp.length){const a=rnd(8);let b=rnd(8);if(b===a)b=(a+3)%8;S.imp=[a,b]}
+  if(!S.name)S.name="محمد إياد هلوبي";
+  go(STEPS.indexOf("res"));
+}
+function demoNext(){
+  const st=STEPS[S.step];
+  if(st==="cover"){newRun();go(1);return}
+  if(st==="draw"){S.gut=S.gut.map(v=>v||3+rnd(7));go(S.step+1);return}
+  const a=axOf(st);
+  if(a>-1){fillAxis(a);go(a<7?STEPS.indexOf("ax"+(a+1)):STEPS.indexOf("imp"));return}
+  go(S.step+1);
+}
+let demoOpen=true;
+function paintDemo(){
+  const el=$("#demo");if(!DEMO){el.hidden=true;return}el.hidden=false;
+  el.innerHTML=`<div class="box"${demoOpen?"":" hidden"}><b>معاينة سريعة</b><div class="row"><button class="go" data-d="end">اقفز للتقرير</button><button data-d="next">الشاشة التالية المهمة</button></div><b>شكل التصميم</b><div class="row">${Object.keys(SKINS).map(k=>`<button data-s="${k}" class="${k===SKIN?"on":""}">${SKINS[k].name}</button>`).join("")}</div></div><button class="pill" data-d="tog">${demoOpen?"إخفاء":"معاينة"}</button>`;
+  el.onclick=e=>{const b=e.target.closest("button");if(!b)return;
+    if(b.dataset.s){applySkin(b.dataset.s);render();return}
+    const d=b.dataset.d;if(d==="tog"){demoOpen=!demoOpen;paintDemo()}else if(d==="end")demoToEnd();else demoNext()};
+}
+
+/* ============ الحالة ============ */
+const S = {gut:Array(8).fill(null), ans:{}, flip:{}, imp:[], name:"", photo:null, img:null, crop:null, lay:0, sth:null, step:0};
+let STEPS = ["cover"];
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const stage = $("#stage");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let timer=0;
+
+function newRun(){
+  S.sent=false;track({t:"start"});
+  Object.assign(S,{gut:Array(8).fill(null),ans:{},imp:[],lay:0,sth:null,photo:null,img:null,crop:null});
+  S.name = (new URLSearchParams(location.search).get("n")||"").trim().slice(0,40);
+  S.flip = {}; Q.forEach((q,i)=>{ if(q.t==="pair") S.flip[i] = Math.random()<.5; });
+  STEPS = ["cover","draw"];
+  AX.forEach((_,a)=>{STEPS.push("ax"+a);AXQ[a].forEach(i=>STEPS.push("q"+i))});
+  STEPS.push("imp","me","res");
+}
+const answeredIn = a => AXQ[a].filter(i=>S.ans[i]!==undefined).length;
+const axDone = a => answeredIn(a)===AXQ[a].length;
+
+/* ============ الثيم ============ */
+function isDark(){const t=document.documentElement.dataset.theme;return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+function paintTheme(){$("#thm").innerHTML=ic(isDark()?ICO.sun:ICO.moon);document.querySelector('meta[name="theme-color"]').content=(isDark()?SKINS[SKIN].D:SKINS[SKIN].L).paper}
+$("#thm").onclick=()=>{document.documentElement.dataset.theme=isDark()?"light":"dark";paintTheme()};
+$("#help").innerHTML=ic(ICO.help)+"التعليمات";
+const modal=(id,on)=>{$(id).hidden=!on};
+$("#help").onclick=()=>modal("#hlp",1);
+$("#hok").onclick=()=>modal("#hlp",0);
+$("#iok").onclick=()=>modal("#ins",0);
+["#hlp","#ins"].forEach(id=>$(id).addEventListener("click",e=>{if(e.target===$(id))modal(id,0)}));
+$("#back").innerHTML=ic(ICO.back);
+$("#back").onclick=()=>{if(S.step>0)go(S.step-1)};
+function setGlow(a,b,c){const r=document.documentElement.style;r.setProperty("--g1",a);r.setProperty("--g2",b);r.setProperty("--g3",c)}
+
+/* ============ هندسة العجلة ============ */
+const f2 = n => +n.toFixed(2);
+const pol = (cx,cy,r,deg) => {const a=(deg-90)*Math.PI/180;return [f2(cx+r*Math.cos(a)),f2(cy+r*Math.sin(a))]};
+function sec(cx,cy,r0,r1,a0,a1){
+  if(r1<=r0+.3) return "";
+  const [x0,y0]=pol(cx,cy,r1,a0),[x1,y1]=pol(cx,cy,r1,a1);
+  if(r0<=0) return `M${cx} ${cy}L${x0} ${y0}A${r1} ${r1} 0 0 1 ${x1} ${y1}Z`;
+  const [x2,y2]=pol(cx,cy,r0,a1),[x3,y3]=pol(cx,cy,r0,a0);
+  return `M${x3} ${y3}L${x0} ${y0}A${r1} ${r1} 0 0 1 ${x1} ${y1}L${x2} ${y2}A${r0} ${r0} 0 0 0 ${x3} ${y3}Z`;
+}
+function gutPath(cx,cy,R,vals){
+  let d="";
+  vals.forEach((v,i)=>{const r=Math.max(2,R*v/100);const p0=pol(cx,cy,r,i*45),p1=pol(cx,cy,r,(i+1)*45);d+=(i?`L${p0[0]} ${p0[1]}`:`M${p0[0]} ${p0[1]}`)+`A${r} ${r} 0 0 1 ${p1[0]} ${p1[1]}`});
+  return d+"Z";
+}
+/* عجلة SVG: لكل جانب لونه، والأولوية بإطار خمري على حافة العجلة */
+function wheelSVG(V,vals,{acc=-1,gut=null,labels=false,breathe=false,dim=null}={}){
+  const c=V/2,RR=labels?c-46:c-4;
+  let s=`<svg viewBox="0 0 ${V} ${V}" aria-hidden="true"><circle cx="${c}" cy="${c}" r="${RR}" fill="var(--sheet)"/>`;
+  [.25,.5,.75].forEach(f=>s+=`<circle cx="${c}" cy="${c}" r="${RR*f}" fill="none" stroke="var(--line)" stroke-width="1"/>`);
+  vals.forEach((v,i)=>{const d=sec(c,c,0,RR*v/100,i*45,(i+1)*45);if(d)s+=`<path d="${d}" fill="${cv(i)}"${dim!==null&&dim!==i?' opacity=".35"':""}${breathe?` class="br" style="animation-delay:${(-i*.6).toFixed(1)}s"`:""}/>`});
+  for(let i=0;i<8;i++){const [x,y]=pol(c,c,RR,i*45);s+=`<line x1="${c}" y1="${c}" x2="${x}" y2="${y}" stroke="var(--sheet)" stroke-width="${Math.max(2,V/110).toFixed(1)}"/>`}
+  if(gut) s+=`<path d="${gutPath(c,c,RR,gut)}" fill="none" stroke="var(--ink)" stroke-width="${(V/180).toFixed(1)}" stroke-dasharray="${(V/55).toFixed(1)} ${(V/75).toFixed(1)}" stroke-linejoin="round"/>`;
+  s+=`<circle cx="${c}" cy="${c}" r="${RR}" fill="none" stroke="var(--ink)" stroke-width="1.4"/>`;
+  if(acc>-1){const [x0,y0]=pol(c,c,RR+5,acc*45+3),[x1,y1]=pol(c,c,RR+5,(acc+1)*45-3);s+=`<path d="M${x0} ${y0}A${RR+5} ${RR+5} 0 0 1 ${x1} ${y1}" fill="none" stroke="var(--acc)" stroke-width="${Math.max(3,V/55).toFixed(1)}" stroke-linecap="round"/>`}
+  s+=`<circle cx="${c}" cy="${c}" r="${Math.max(4,V/45)}" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.4"/>`;
+  if(labels) AX.forEach((a,i)=>{const [x,y]=pol(c,c,RR+28,i*45+22.5);s+=`<text x="${x}" y="${y-2}" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-weight="600" font-size="12" fill="${i===acc?"var(--acc)":"var(--ink)"}">${a.n}</text><text x="${x}" y="${y+13}" text-anchor="middle" font-family="IBM Plex Mono" font-size="11.5" fill="${cv(i)}">${vals[i]}</text>`});
+  return s+"</svg>";
+}
+
+/* ============ التنقل ============ */
+const stageNo = st => st==="draw"?1:(st.startsWith("ax")||st.startsWith("q"))?2:st==="imp"?3:st==="me"?4:0;
+const axOf = st => st.startsWith("ax")?+st.slice(2):st.startsWith("q")?Q[+st.slice(1)].a:-1;
+function go(n){clearTimeout(timer);S.step=Math.max(0,Math.min(STEPS.length-1,n));render();scrollTo({top:0})}
+function render(){
+  const st=STEPS[S.step],a=axOf(st),sg=stageNo(st);
+  $("#back").hidden=S.step===0;
+  $("#sig").hidden=(st==="cover"||st==="res");
+  $("#tt").textContent=sg?`المرحلة ${sg} من 4`:"قعدة صراحة — تقرير";
+  document.documentElement.style.setProperty("--c",a>-1?cv(a):"var(--ink)");
+  if(a>-1)setGlow(cv(a),cv((a+3)%8),cv(a));else setGlow("var(--a1)","var(--a2)","var(--a5)");
+  stage.className="";
+  if(st==="cover") rCover();
+  else{
+    const flow=sg>0;
+    stage.innerHTML=`<div class="mn" id="mn"></div>${flow?`<aside class="aside" id="as"></aside>`:""}`;
+    if(flow)stage.classList.add("two");
+    if(st==="draw") rDraw();
+    else if(st.startsWith("ax")) rAx(a);
+    else if(st.startsWith("q")) rQ(+st.slice(1));
+    else if(st==="imp") rImp();
+    else if(st==="me") rMe();
+    else rRes();
+    if(flow)paintAside(a);
+  }
+  void stage.offsetWidth;stage.classList.add("in");
+  if(DEMO)paintDemo();
+}
+const MN=()=>$("#mn");
+function secsBar(cur){return `<div class="secs">${AX.map((_,i)=>`<span class="${i===cur?"c":axDone(i)?"d":""}" style="--sc:${cv(i)}"><i></i><b>${p2(i+1)}</b></span>`).join("")}</div>`}
+/* لوحة جانبية على اللابتوب: تقدّمك في كل جانب وعجلة إحساسك */
+function paintAside(cur){
+  const as=$("#as");if(!as)return;
+  const g=S.gut.map(v=>(v||0)*10);
+  as.innerHTML=`<span class="k">تقدّمك</span><div class="pr-l">${AX.map((x,i)=>{const n=answeredIn(i),t=AXQ[i].length;return `<div class="pr-r${i===cur?" cur":""}" style="--c:${cv(i)}">${i===cur?mic(i):ic(x.i)}<div><span>${x.n}</span><div class="bt"><i style="width:${100*n/t}%"></i></div></div><small>${n}/${t}</small></div>`}).join("")}</div>
+   ${S.gut.some(v=>v)?`<span class="k" style="margin-top:14px">عجلة إحساسك</span><div class="wb2">${wheelSVG(220,g,{dim:cur>-1?cur:null})}</div>`:""}`;
+}
+
+/* ============ الغلاف ============ */
+function rCover(){
+  const items=["عجلة الحياة أداة كوتشينغ ابتكرها Paul J. Meyer في ستينيات القرن الماضي","تقيس رضاك عن 8 جوانب من حياتك","ترسم عجلتك أولاً كما تشعر بها","ثم تجيب عن أسئلة كل جانب على حدة","تحصل على تقرير يقارن إحساسك بواقعك","ويحدد لك من أين تبدأ"];
+  const run=items.map(t=>`<span>${t}</span>`).join("");
+  stage.innerHTML=`<section class="cv">
+   <div class="cvl">
+    <div class="cv-meta"><span class="k">العدد 01</span><span class="k">${MONTHS[NOW.getMonth()]} ${NOW.getFullYear()}</span></div>
+    <h1>عجلة<br><span>حياتك</span></h1>
+    <p class="lead">تقرير شخصي عن رضاك في 8 جوانب من حياتك، ونسبة التطابق بين إحساسك وواقعك، ومن أين تبدأ.</p>
+    <p class="by">إعداد م. إياد حلوبي</p>
+   </div>
+   <div class="cvr cv-w"><div class="wh"><svg viewBox="0 0 240 240" aria-hidden="true"><g class="spin"><circle cx="120" cy="120" r="117" fill="none" stroke="var(--muted)" stroke-opacity=".5" stroke-dasharray="2 7"/></g></svg><div style="position:absolute;inset:7%">${wheelSVG(240,[90,62,78,55,95,48,82,70],{breathe:true})}</div></div>
+    <div class="cv-l">${AX.map((a,i)=>`<span><i style="background:${cv(i)}"></i><em>${p2(i+1)}</em>${a.n}</span>`).join("")}</div></div>
+   <div class="cvb">
+    <div class="tick" aria-hidden="true"><div class="tick-in">${run}${run}</div></div>
+    <div class="meta"><span>${Q.length} سؤالاً · 8 جوانب</span><span>نحو ${MIN} دقائق</span></div>
+    <button class="cta" id="go"><span>ابدأ التقرير</span><span class="ar">←</span></button>
+   </div>
+  </section>`;
+  $("#go").onclick=()=>{newRun();go(1)};
+}
+
+/* ============ المرحلة 1: الرسم ============ */
+const DV=400,DC=200,DR=132;
+function rDraw(){
+  MN().innerHTML=`<span class="k">المرحلة 1 من 4 · إحساسك</span>
+  <h2 class="h2">ارسم عجلتك كما تشعر بها الآن</h2>
+  <p class="hint">في كل قطعة اسحب من المركز نحو الخارج: المركز يعني غير راضٍ أبداً، والطرف يعني راضٍ تماماً.</p>
+  <div class="wb"><svg id="dw" viewBox="0 0 ${DV} ${DV}" role="img" aria-label="عجلتك"></svg></div>
+  <div class="stp" id="stp"></div>
+  <div class="nav"><button class="cta" id="nx" disabled><span>التالي</span><span class="ar">←</span></button></div>`;
+  const svg=$("#dw");paintDraw();
+  let lock=-1;
+  const at=e=>{const r=svg.getBoundingClientRect();const x=(e.clientX-r.left)/r.width*DV-DC,y=(e.clientY-r.top)/r.height*DV-DC;return{d:Math.hypot(x,y),deg:(Math.atan2(x,-y)*180/Math.PI+360)%360}};
+  const set=(p,i)=>{S.gut[i]=Math.max(1,Math.min(10,Math.ceil(p.d/DR*10)));paintDraw()};
+  svg.addEventListener("pointerdown",e=>{const p=at(e);if(p.d>DR+26)return;lock=Math.floor(p.deg/45)%8;svg.setPointerCapture(e.pointerId);set(p,lock)});
+  svg.addEventListener("pointermove",e=>{if(lock>=0)set(at(e),lock)});
+  const up=()=>{lock=-1;paintAside(-1)};svg.addEventListener("pointerup",up);svg.addEventListener("pointercancel",up);
+  $("#stp").addEventListener("click",e=>{const b=e.target.closest("button[data-d]");if(!b)return;const i=+b.dataset.i;S.gut[i]=Math.max(1,Math.min(10,(S.gut[i]||0)+ +b.dataset.d));paintDraw();paintAside(-1)});
+  $("#nx").onclick=()=>go(S.step+1);
+}
+function paintDraw(){
+  let s=`<circle cx="${DC}" cy="${DC}" r="${DR}" fill="var(--sheet)"/>`;
+  [.2,.4,.6,.8].forEach(f=>s+=`<circle cx="${DC}" cy="${DC}" r="${DR*f}" fill="none" stroke="var(--line)"/>`);
+  S.gut.forEach((v,i)=>{s+= v?`<path d="${sec(DC,DC,0,DR*v/10,i*45,(i+1)*45)}" fill="${cv(i)}"/>`:`<path d="${sec(DC,DC,0,DR*.5,i*45+7,(i+1)*45-7)}" fill="none" stroke="${cv(i)}" stroke-dasharray="3 5" opacity=".8"/>`});
+  for(let i=0;i<8;i++){const [x,y]=pol(DC,DC,DR,i*45);s+=`<line x1="${DC}" y1="${DC}" x2="${x}" y2="${y}" stroke="var(--sheet)" stroke-width="3"/>`}
+  for(let k=0;k<80;k++){const a=k*4.5,L=k%10===0?8:3,[x0,y0]=pol(DC,DC,DR+3,a),[x1,y1]=pol(DC,DC,DR+3+L,a);s+=`<line x1="${x0}" y1="${y0}" x2="${x1}" y2="${y1}" stroke="var(--ink)" stroke-width=".8"/>`}
+  s+=`<circle cx="${DC}" cy="${DC}" r="${DR}" fill="none" stroke="var(--ink)" stroke-width="1.4"/><circle cx="${DC}" cy="${DC}" r="8" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.4"/>`;
+  AX.forEach((a,i)=>{const [x,y]=pol(DC,DC,DR+38,i*45+22.5);s+=`<svg x="${x-11}" y="${y-36}" width="22" height="22" viewBox="0 0 24 24" class="ic" style="color:${cv(i)}">${a.i}</svg><text x="${x}" y="${y}" text-anchor="middle" font-family="IBM Plex Sans Arabic" font-weight="600" font-size="13" fill="var(--ink)">${a.n}</text><text x="${x}" y="${y+16}" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="${S.gut[i]?cv(i):"var(--muted)"}">${S.gut[i]?S.gut[i]+"/10":"—"}</text>`});
+  $("#dw").innerHTML=s;
+  $("#stp").innerHTML=AX.map((a,i)=>`<div class="st${S.gut[i]?" set":""}"><span class="nm"><i style="background:${cv(i)}"></i>${a.n}</span><button data-i="${i}" data-d="-1" aria-label="أقل">−</button><b>${S.gut[i]||"–"}</b><button data-i="${i}" data-d="1" aria-label="أكثر">+</button></div>`).join("");
+  $("#nx").disabled=S.gut.some(v=>!v);
+}
+
+/* ============ المرحلة 2: بداية القسم ============ */
+function rAx(a){
+  const done=AX.filter((_,i)=>axDone(i)).length;
+  MN().innerHTML=`${secsBar(a)}
+  <div class="axp"><div class="ax-top"><div><span class="k">القسم</span><div class="ax-n">${p2(a+1)}</div></div><div class="ax-ic">${mic(a)}</div></div></div>
+  <div class="rule" style="margin-top:16px"></div>
+  <div class="ax-h"><h2 style="color:var(--c)">الجانب ال${AX[a].n}</h2></div>
+  <p class="ax-d">${AX[a].d}</p>
+  <div class="kpi" style="margin-top:22px"><div><span class="k">أسئلة القسم</span><b>${AXQ[a].length}</b></div><div><span class="k">أقسام منجزة</span><b>${done} <small>من 8</small></b></div><div><span class="k">أقسام متبقية</span><b>${8-done}</b></div></div>
+  <div class="nav"><button class="cta" id="nx"><span>ابدأ القسم ${p2(a+1)}</span><span class="ar">←</span></button></div>`;
+  $("#nx").onclick=()=>go(S.step+1);
+}
+
+/* ============ المرحلة 2: السؤال ============ */
+function rQ(qi){
+  const q=Q[qi],a=q.a,list=AXQ[a],k=list.indexOf(qi),left=list.length-k-1,ans=S.ans[qi];
+  const mini=list.map((i,j)=>`<i class="${S.ans[i]!==undefined?"d":j===k?"c":""}"></i>`).join("");
+  let body;
+  if(q.t==="like"){
+    body=`<p class="k" style="margin-top:20px">إلى أي حدّ يشبهك؟</p><h2 class="qtx">${esc(q.q)}</h2>
+    <div class="ops">${SCALE.map((l,v)=>`<button class="op${ans===v?" on":""}" data-v="${v}"><span class="n">${v+1}</span>${l}<span class="dot"></span></button>`).join("")}</div>`;
+  }else{
+    const sides=S.flip[qi]?["B","A"]:["A","B"];
+    body=`<p class="k" style="margin-top:20px">هذا أم ذاك؟</p><h2 class="qtx">أيّهما أقرب إليك؟</h2>
+    <div class="pair">
+      <button class="pc${ans===sides[0]?" on":""}" data-v="${sides[0]}"><span class="l"></span><span>${esc(q[sides[0]])}</span></button>
+      <div class="or">أو</div>
+      <button class="pc${ans===sides[1]?" on":""}" data-v="${sides[1]}"><span class="l"></span><span>${esc(q[sides[1]])}</span></button>
+      <button class="mid${ans==="M"?" on":""}" data-v="M">${ic(ICO.eq)}بين الاثنين</button>
+    </div>`;
+  }
+  MN().innerHTML=`${secsBar(a)}
+  <div class="qh"><div class="ax"><span class="qi">${mic(a)}</span><div><span class="k">القسم ${p2(a+1)}</span><b>الجانب ال${AX[a].n}</b><div class="mini">${mini}</div></div></div>
+   <div class="qn">${p2(k+1)}<small>/${p2(list.length)}</small></div></div>
+  <div class="rule" style="margin-top:12px"></div>
+  ${body}
+  <p class="qf">${left?`بقي ${left} ${left>2&&left<11?"أسئلة":"سؤال"} في هذا القسم`:"آخر سؤال في هذا القسم"} · القسم ${a+1} من 8</p>`;
+  MN().querySelectorAll("[data-v]").forEach(b=>b.addEventListener("click",()=>{
+    S.ans[qi]=q.t==="like"?+b.dataset.v:b.dataset.v;
+    MN().querySelectorAll("[data-v]").forEach(x=>x.classList.toggle("on",x===b));
+    const m=MN().querySelectorAll(".mini i")[k];if(m)m.className="d";
+    paintAside(a);
+    clearTimeout(timer);const cur=S.step;timer=setTimeout(()=>{if(S.step===cur)go(cur+1)},RM?120:420);
+  }));
+}
+
+/* ============ المرحلة 3: الأولويات ============ */
+function rImp(){
+  MN().innerHTML=`<span class="k">المرحلة 3 من 4 · أولوياتك</span>
+  <h2 class="h2">لو أردت أن تعمل على جانبين فقط في هذه الفترة، فما هما؟</h2>
+  <p class="hint">الضغطة الأولى هي الأهم (1)، والثانية بعدها (2). الضغط على المختار يلغيه.</p>
+  <div class="chips" id="chips"></div>
+  <div class="nav"><button class="cta" id="nx"><span>التالي</span><span class="ar">←</span></button></div>`;
+  const paint=()=>{$("#chips").innerHTML=AX.map((a,i)=>{const k=S.imp.indexOf(i);return`<button class="ch${k>-1?" on":""}${k===0?" r1":""}" data-i="${i}" style="--c:${cv(i)}">${k>-1?mic(i):ic(a.i)}<span>${a.n}</span><em>${k>-1?k+1:""}</em></button>`}).join("");$("#nx").disabled=!S.imp.length};
+  paint();
+  $("#chips").onclick=e=>{const b=e.target.closest(".ch");if(!b)return;const i=+b.dataset.i,k=S.imp.indexOf(i);
+    if(k>-1)S.imp.splice(k,1);else if(S.imp.length<2)S.imp.push(i);else return;paint();
+    clearTimeout(timer);if(S.imp.length===2){const cur=S.step;timer=setTimeout(()=>{if(S.step===cur&&S.imp.length===2)go(cur+1)},RM?150:600)}};
+  $("#nx").onclick=()=>go(S.step+1);
+}
+
+/* ============ المرحلة 4: الاسم والصورة ============ */
+function rMe(){
+  MN().innerHTML=`<span class="k">المرحلة 4 من 4 · صاحب التقرير</span>
+  <h2 class="h2">لمن هذا التقرير؟</h2>
+  <p class="hint">يظهر الاسم والصورة في التقرير وفي صورة الستوري. كلاهما اختياري، ويمكنك المتابعة دونهما.</p>
+  <label class="fld"><span class="k">الاسم</span><input id="nm" type="text" maxlength="40" autocomplete="off" placeholder="اكتب اسمك" value="${esc(S.name)}"></label>
+  <div class="fld"><span class="k">الصورة</span><div class="ph"><div class="pv" id="pv"></div><div class="pa" id="pa"></div></div></div>
+  <div class="nav"><button class="cta" id="nx"><span>اعرض تقريري</span><span class="ar">←</span></button></div>`;
+  $("#nm").oninput=e=>S.name=e.target.value;
+  paintPhoto();
+  $("#nx").onclick=()=>{S.name=$("#nm").value.trim();go(S.step+1)};
+}
+function thumb(el,size){const c=document.createElement("canvas");c.width=c.height=size;c.getContext("2d").drawImage(S.photo,0,0,size,size);el.appendChild(c)}
+function paintPhoto(){
+  const pv=$("#pv"),pa=$("#pa");if(!pv)return;
+  pv.className="pv"+(S.photo?" has":"");pv.innerHTML="";pv.onclick=null;
+  if(S.photo){thumb(pv,192);
+    pa.innerHTML=`<button class="lnk main" id="pe">عدّل القص</button><button class="lnk" id="pc">غيّر الصورة</button><button class="lnk" id="pr">احذف الصورة</button>`;
+    $("#pe").onclick=()=>openCrop(S.img,S.crop);$("#pc").onclick=()=>$("#file").click();$("#pr").onclick=()=>{S.photo=S.img=S.crop=null;paintPhoto()};
+  }else{pv.innerHTML=ic(ICO.cam);pa.innerHTML=`<button class="lnk main" id="pc">أضف صورة</button>`;$("#pc").onclick=()=>$("#file").click();pv.onclick=()=>$("#file").click()}
+}
+$("#file").addEventListener("change",e=>{const f=e.target.files[0];e.target.value="";if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>openCrop(im,null);im.onerror=()=>toast("تعذّر فتح هذه الصورة");im.src=r.result};r.readAsDataURL(f)});
+
+/* ============ القص: تصغير حتى تظهر كاملة، وسحب إلى كل الحواف ============ */
+const CR={};
+const cf=$("#cf"),ci=$("#ci"),cz=$("#cz");
+$("#zo").innerHTML=ic(ICO.minus);$("#zi").innerHTML=ic(ICO.plus);
+function openCrop(img,prev){
+  $("#crop").hidden=false;
+  Object.assign(CR,{img,w:img.naturalWidth,h:img.naturalHeight});
+  ci.src=img.src;
+  requestAnimationFrame(()=>{
+    CR.F=cf.clientWidth;CR.c=CR.F/Math.max(CR.w,CR.h);
+    CR.cover=Math.max(CR.w,CR.h)/Math.min(CR.w,CR.h);CR.min=1;CR.max=CR.cover*4;
+    CR.s=prev?prev.s:CR.cover;CR.x=prev?prev.x*CR.F:0;CR.y=prev?prev.y*CR.F:0;cApply();
+  });
+}
+function cApply(){
+  CR.s=Math.min(CR.max,Math.max(CR.min,CR.s));
+  const W=CR.w*CR.c*CR.s,H=CR.h*CR.c*CR.s,lx=Math.abs(W-CR.F)/2,ly=Math.abs(H-CR.F)/2;
+  CR.x=Math.min(lx,Math.max(-lx,CR.x));CR.y=Math.min(ly,Math.max(-ly,CR.y));
+  ci.style.width=W+"px";ci.style.height=H+"px";
+  ci.style.transform=`translate(${CR.F/2-W/2+CR.x}px,${CR.F/2-H/2+CR.y}px)`;
+  cz.value=Math.round(Math.log(CR.s/CR.min)/Math.log(CR.max/CR.min)*1000);
+}
+cz.addEventListener("input",()=>{CR.s=CR.min*Math.pow(CR.max/CR.min,cz.value/1000);cApply()});
+const PT=new Map();let pinch=0;
+cf.addEventListener("pointerdown",e=>{cf.setPointerCapture(e.pointerId);PT.set(e.pointerId,{x:e.clientX,y:e.clientY});if(PT.size===2){const[a,b]=[...PT.values()];pinch=Math.hypot(a.x-b.x,a.y-b.y)}});
+cf.addEventListener("pointermove",e=>{if(!PT.has(e.pointerId))return;const p=PT.get(e.pointerId),dx=e.clientX-p.x,dy=e.clientY-p.y;PT.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(PT.size===1){CR.x+=dx;CR.y+=dy}else if(PT.size===2){const[a,b]=[...PT.values()];const d=Math.hypot(a.x-b.x,a.y-b.y);if(pinch)CR.s*=d/pinch;pinch=d}cApply()});
+const pEnd=e=>{PT.delete(e.pointerId);pinch=0};cf.addEventListener("pointerup",pEnd);cf.addEventListener("pointercancel",pEnd);
+cf.addEventListener("wheel",e=>{e.preventDefault();CR.s*=Math.exp(-e.deltaY*.0015);cApply()},{passive:false});
+$("#cno").onclick=()=>{$("#crop").hidden=true};
+$("#cok").onclick=()=>{
+  const O=1000,k=O/CR.F,W=CR.w*CR.c*CR.s,H=CR.h*CR.c*CR.s,c=document.createElement("canvas");c.width=c.height=O;
+  const x=c.getContext("2d");x.fillStyle="#E2DCD1";x.fillRect(0,0,O,O);
+  x.drawImage(CR.img,(CR.F/2-W/2+CR.x)*k,(CR.F/2-H/2+CR.y)*k,W*k,H*k);
+  S.photo=c;S.img=CR.img;S.crop={s:CR.s,x:CR.x/CR.F,y:CR.y/CR.F};$("#crop").hidden=true;paintPhoto();
+};
+
+/* ============ الحساب ============ */
+function sc(q,i){const v=S.ans[i];if(v===undefined)return 50;if(q.t==="like"){const s=v*25;return q.r?100-s:s}return v==="A"?100:v==="M"?50:0}
+function calc(){
+  const m=AX.map((_,a)=>Math.round(AXQ[a].reduce((s,i)=>s+sc(Q[i],i),0)/AXQ[a].length));
+  const g=S.gut.map(v=>(v||0)*10);
+  const avg=Math.round(m.reduce((x,y)=>x+y,0)/8),spread=Math.max(...m)-Math.min(...m);
+  const type=TYPES[(avg>=65?0:2)+(spread>=35?1:0)];
+  const fit=Math.max(0,Math.round(100-m.reduce((s,v,a)=>s+Math.abs(g[a]-v),0)/8));
+  const w=a=>S.imp[0]===a?2:S.imp[1]===a?1.5:1;
+  let pr=0,best=-1;m.forEach((v,a)=>{const need=(100-v)*w(a);if(need>best){best=need;pr=a}});
+  let st=-1;m.forEach((v,a)=>{if(a!==pr&&(st<0||v>m[st]))st=a});
+  const gap=m.map((v,a)=>g[a]-v);
+  let hi=0,lo=0;gap.forEach((d,a)=>{if(d>gap[hi])hi=a;if(d<gap[lo])lo=a});
+  return{m,g,avg,bal:100-spread,fit,type,pr,st,gap,hi,lo};
+}
+const fitLabel=f=>f>=85?"تعرف نفسك جيداً":f>=70?"قريب جداً من واقعك":f>=55?"بين إحساسك وواقعك مسافة":"إحساسك بعيد عن واقعك";
+
+/* ============ التقرير ============ */
+let R=null;
+function rRes(){
+  R=calc();const name=S.name.trim();
+  if(!S.sent){S.sent=true;track({t:"done",type:R.type.t,pr:AX[R.pr].n,fit:R.fit})}
+  const order=AX.map((_,i)=>i).sort((a,b)=>R.m[b]-R.m[a]);
+  const prA=AX[R.pr],imp=S.imp.includes(R.pr);
+  let gT,gD,gk=-1;
+  if(R.gap[R.hi]<15&&R.gap[R.lo]>-15){gT="إحساسك وواقعك متطابقان تقريباً";gD="تعرف نفسك جيداً، وهذا يسهّل عليك أي تغيير."}
+  else if(R.gap[R.hi]>=-R.gap[R.lo]){gk=R.hi;gT=`في الجانب ال${AX[R.hi].n} إحساسك يسبق واقعك`;gD=`تشعر أنك في وضع جيد فيه (${R.g[R.hi]}) أكثر مما تُظهر إجاباتك (${R.m[R.hi]}). ربما النية موجودة، وتنقصها خطوة عملية.`}
+  else{gk=R.lo;gT=`في الجانب ال${AX[R.lo].n} تقسو على نفسك`;gD=`إجاباتك فيه (${R.m[R.lo]}) أفضل من إحساسك (${R.g[R.lo]}). أعطِ نفسك حقها، فأنت تفعل أكثر مما تظن.`}
+  if(!S.sth)S.sth=isDark()?"dark":"light";
+  stage.innerHTML="";stage.className="";
+  const wrap=document.createElement("div");wrap.className="res two";stage.appendChild(wrap);
+  wrap.innerHTML=`<div class="rm mn">
+  <div class="rh">${S.photo?`<div class="pv has" id="rp"></div>`:""}<div><span class="k">تقرير عجلة حياة · <span class="mono">${DATE}</span></span><h1>${esc(name||"تقريرك")}</h1></div></div>
+  <div class="kpi k4" style="margin-top:16px"><div><span class="k">المعدل</span><b>${R.avg}</b></div><div><span class="k">التطابق</span><b>${R.fit}<small>%</small></b></div><div><span class="k">التوازن</span><b>${R.bal}</b></div><div><span class="k">الأولوية</span><b class="acc">${prA.n}</b></div></div>
+  <div class="sum"><div class="wbx">${wheelSVG(220,R.m,{acc:R.pr,gut:R.g})}</div><div><span class="k">الخلاصة</span><h2>${R.type.t}</h2><p>${R.type.d}</p></div></div>
+  <div class="leg"><span><i></i>واقعك (من إجاباتك)</span><span><i class="f"></i>إحساسك (رسمتك)</span><span><i class="a"></i>الأولوية</span></div>
+  <h3 class="sh">الجوانب الثمانية <small>الواقع من 100 · والخط الأسود إحساسك</small></h3>
+  <div class="bars">${order.map(i=>`<div class="bar${i===R.pr?" p":""}" style="--c:${cv(i)}"><span class="nm">${ic(AX[i].i)}${AX[i].n}</span><span class="t"><i data-w="${R.m[i]}"></i><u style="right:calc(${R.g[i]}% - 1px)"></u></span><span class="v"><b>${R.m[i]}</b><small>إحساسك ${R.g[i]}</small></span></div>`).join("")}</div>
+  <h3 class="sh">ماذا يقول التقرير؟</h3>
+  <div class="ins">
+   <div class="in2" style="--c:var(--acc)"><span class="k">إحساسك مقابل واقعك</span>
+    <div class="match"><div class="ring" style="--v:${R.fit}"><b>${R.fit}%</b></div><div><h4>${fitLabel(R.fit)}</h4><p style="font-size:14px;color:var(--muted)">نسبة التطابق بين عجلة إحساسك وما تقوله إجاباتك.</p></div></div>
+    <h4 style="margin-top:10px;font-size:16px">${gT}</h4><p>${gD}</p></div>
+   <div class="in2" style="--c:${cv(R.st)}"><span class="k">أقوى جانب لديك</span><h4>${ic(AX[R.st].i)}الجانب ال${AX[R.st].n} · <span class="mono">${R.m[R.st]}</span></h4><p>هذا سندك في هذه الفترة؛ استعن به ليشدّ بقية الجوانب معه.</p></div>
+   <div class="in2" style="--c:${cv(R.pr)};border-inline-start-color:var(--acc)"><span class="k" style="color:var(--acc)">من أين تبدأ</span><h4>${ic(prA.i)}الجانب ال${prA.n} · <span class="mono">${R.m[R.pr]}</span></h4>
+    <p>${imp?"اخترته من أهم جانبين لديك، وفيه أكبر مساحة للتحسّن. أي خطوة فيه سيظهر أثرها.":"فيه أكبر مساحة للتحسّن، ورفعه يجعل العجلة كلها تدور بسلاسة أكبر."}</p>
+    <div class="tips">${prA.tips.map((t,k)=>`<div><b>${p2(k+1)}</b><span>${t}</span></div>`).join("")}</div></div>
+  </div></div>
+  <div class="rs">
+  <h3 class="sh">صورة الستوري</h3>
+  <div class="story">
+   <div class="lays" id="lays">${["غلاف","بولارويد","بطاقة"].map((l,k)=>`<button class="ly${k===S.lay?" on":""}" data-k="${k}"><canvas width="216" height="384"></canvas>${l}</button>`).join("")}</div>
+   <div class="tgl" id="sth"><button data-t="light">${ic(ICO.sun)}فاتحة</button><button data-t="dark">${ic(ICO.moon)}داكنة</button></div>
+   <div class="prev"><canvas id="sv" width="1080" height="1920" aria-label="معاينة صورة الستوري"></canvas></div>
+   <div class="acts"><button class="ghost sv" id="dl">${ic(ICO.dl)}احفظ الصورة</button><button class="ghost" id="sh">${ic(ICO.share)}شارك مع أصدقائك</button></div>
+  </div>
+  <div class="inst"><div class="ico" id="ico"></div><div><b>ثبّته على جهازك</b><span>أيقونة على شاشتك، تفتح التقرير كتطبيق.</span></div><button class="ghost" id="in">${ic(ICO.phone)}ثبّت</button></div>
+  <button class="restart" id="rs">${ic(ICO.redo)}ابدأ من جديد</button>
+  <div class="rf"><b class="mono">@eyad.hloubi</b><span>صار بدها قعدة.</span></div>
+  </div>`;
+  if(S.photo)thumb($("#rp"),180);
+  const ico=document.createElement("canvas");ico.width=ico.height=108;ico.getContext("2d").drawImage(appIcon(),0,0,108,108);$("#ico").appendChild(ico);
+  requestAnimationFrame(()=>setTimeout(()=>$$(".bar .t i").forEach(el=>el.style.width=el.dataset.w+"%"),60));
+  const D={name:name,title:R.type.t,m:R.m,pr:R.pr,avg:R.avg,fit:R.fit};
+  const full=[0,1,2].map(()=>{const c=document.createElement("canvas");c.width=1080;c.height=1920;return c});
+  const showBig=()=>{const sv=$("#sv");if(sv){const x=sv.getContext("2d");x.clearRect(0,0,1080,1920);x.drawImage(full[S.lay],0,0)}};
+  const drawAll=()=>{$$("#sth button").forEach(b=>b.classList.toggle("on",b.dataset.t===S.sth));
+    ready(S.sth).then(()=>{full.forEach((c,k)=>{const x=c.getContext("2d");x.setTransform(1,0,0,1,0,0);x.clearRect(0,0,1080,1920);LAYS[k](x,D);const t=$$(".ly canvas")[k];if(t){const tx=t.getContext("2d");tx.clearRect(0,0,216,384);tx.drawImage(c,0,0,216,384)}});showBig()})};
+  drawAll();
+  $("#sth").onclick=e=>{const b=e.target.closest("button");if(!b)return;S.sth=b.dataset.t;drawAll()};
+  $("#lays").onclick=e=>{const b=e.target.closest(".ly");if(!b)return;S.lay=+b.dataset.k;$$(".ly").forEach(x=>x.classList.toggle("on",x===b));showBig()};
+  $("#dl").onclick=()=>saveStory(full[S.lay]);
+  $("#sh").onclick=async()=>{const data={title:"صار بدها قعدة.",text:"جرّب «عجلة حياتك» من قعدة صراحة. الرابط في البايو",url:IG};
+    if(navigator.share){try{await navigator.share(data);return}catch(e){if(e.name==="AbortError")return}}
+    try{await navigator.clipboard.writeText(IG);toast("تم نسخ رابط الصفحة")}catch(e){window.open(IG,"_blank","noopener")}};
+  $("#in").onclick=install;
+  $("#rs").onclick=()=>go(0);
+}
+
+/* ============ التثبيت كتطبيق (صفحة ويب على الجهاز) ============ */
+let DEFER=null;
+addEventListener("beforeinstallprompt",e=>{e.preventDefault();DEFER=e});
+addEventListener("appinstalled",()=>toast("تم التثبيت"));
+function appIcon(){
+  const c=document.createElement("canvas");c.width=c.height=512;const x=c.getContext("2d");
+  x.fillStyle="#FFFFFF";x.fillRect(0,0,512,512);
+  const cols=["#6E5677","#9E4A58","#3D5A73","#4A7357","#A35E46","#9A7330","#3B7072","#5F6340"],v=[90,66,80,58,96,52,84,72];
+  v.forEach((val,i)=>{const d=sec(256,256,0,190*val/100,i*45,(i+1)*45);if(d){x.fillStyle=cols[i];x.fill(new Path2D(d))}});
+  x.strokeStyle="#FFFFFF";x.lineWidth=8;for(let i=0;i<8;i++){const b=pol(256,256,190,i*45);x.beginPath();x.moveTo(256,256);x.lineTo(b[0],b[1]);x.stroke()}
+  x.strokeStyle="#16181B";x.lineWidth=10;x.beginPath();x.arc(256,256,192,0,7);x.stroke();
+  x.fillStyle="#FFFFFF";x.beginPath();x.arc(256,256,20,0,7);x.fill();x.stroke();
+  return c;
+}
+(function setupManifest(){
+  if(document.querySelector('link[rel="manifest"]'))return;
+  try{
+    const url=appIcon().toDataURL("image/png");
+    const l=document.createElement("link");l.rel="apple-touch-icon";l.href=url;document.head.appendChild(l);
+    const f=document.createElement("link");f.rel="icon";f.href=url;document.head.appendChild(f);
+    if(location.protocol.startsWith("http")){
+      const man={name:"عجلة حياتك · قعدة صراحة",short_name:"عجلة حياتك",lang:"ar",dir:"rtl",start_url:location.href,scope:location.origin+"/",display:"standalone",background_color:"#F5F1EA",theme_color:"#F5F1EA",icons:[{src:url,sizes:"512x512",type:"image/png",purpose:"any"}]};
+      const m=document.createElement("link");m.rel="manifest";m.href="data:application/manifest+json,"+encodeURIComponent(JSON.stringify(man));document.head.appendChild(m);
+    }
+  }catch(e){}
+})();
+async function install(){
+  if(DEFER){DEFER.prompt();try{await DEFER.userChoice}catch(e){}DEFER=null;return}
+  const ua=navigator.userAgent,ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&"ontouchend" in document),and=/Android/.test(ua);
+  const L=[
+    {k:"ios",t:"آيفون وآيباد (Safari)",d:"اضغط زر المشاركة ⬆︎ أسفل الشاشة، ثم «إضافة إلى الشاشة الرئيسية»."},
+    {k:"and",t:"أندرويد (Chrome)",d:"اضغط القائمة ⋮ أعلى الشاشة، ثم «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية»."},
+    {k:"pc",t:"اللابتوب (Chrome أو Edge)",d:"اضغط أيقونة التثبيت في شريط العنوان، أو من القائمة ⋮ اختر «تثبيت»."}
+  ];
+  const me=ios?"ios":and?"and":"pc";
+  $("#osl").innerHTML=L.sort((a,b)=>(b.k===me)-(a.k===me)).map(o=>`<div class="${o.k===me?"me":""}"><b>${o.t}</b>${o.d}</div>`).join("");
+  modal("#ins",1);
+}
+
+/* ============ صورة الستوري 1080×1920 ============ */
+function PALof(th){const o=th==="dark"?SKINS[SKIN].D:SKINS[SKIN].L;return{bg:o.paper,card:o.sheet,ink:o.ink,mut:o.muted,line:o.line,acc:o.acc,ph:o.line,glow:th==="dark"?.22:.16,ax:th==="dark"?AXD:AXL}}
+const FD='Alexandria,"IBM Plex Sans Arabic",sans-serif',FT='"IBM Plex Sans Arabic",sans-serif',FM='"IBM Plex Mono",monospace';
+let K=null,FONTS=null;
+function ready(th){
+  K=PALof(th==="dark"?"dark":"light");
+  if(!FONTS)FONTS=document.fonts?Promise.all(["800 100px Alexandria","600 100px Alexandria","600 40px 'IBM Plex Sans Arabic'","500 40px 'IBM Plex Sans Arabic'","500 40px 'IBM Plex Mono'"].map(f=>document.fonts.load(f,"عجلة 0123"))).catch(()=>{}):Promise.resolve();
+  return FONTS;
+}
+/* كل سطر يُقاس من أعلى حرف إلى أسفل حرف، فلا يتداخل الكلام مهما طال */
+function blk(ctx,text,o){
+  const words=String(text).split(/\s+/).filter(Boolean),gap=o.gap??16;let out;
+  for(let sz=o.size;sz>=o.min;sz-=2){
+    ctx.font=`${o.weight} ${sz}px ${o.fam}`;
+    const lines=[];let cur="";
+    for(const w of words){const t=cur?cur+" "+w:w;if(!cur||ctx.measureText(t).width<=o.w)cur=t;else{lines.push(cur);cur=w}}
+    if(cur)lines.push(cur);
+    out={font:ctx.font,lines};
+    if(lines.length<=(o.max||1)&&lines.every(l=>ctx.measureText(l).width<=o.w))break;
+  }
+  ctx.font=out.font;
+  const ms=out.lines.map(l=>{const m=ctx.measureText(l);return{l,a:m.actualBoundingBoxAscent,d:m.actualBoundingBoxDescent,w:m.width}});
+  return{font:out.font,ms,gap,h:ms.reduce((s,m)=>s+m.a+m.d,0)+gap*(ms.length-1),w:Math.max(...ms.map(m=>m.w))};
+}
+function put(ctx,b,x,y,align,color,dir="rtl"){
+  ctx.font=b.font;ctx.textAlign=align;ctx.direction=dir;ctx.textBaseline="alphabetic";ctx.fillStyle=color;
+  b.ms.forEach((m,i)=>{y+=m.a;ctx.fillText(m.l,x,y);y+=m.d+(i<b.ms.length-1?b.gap:0)});
+  return y;
+}
+const T=(ctx,t,x,y,o,align="right",color=K.ink,dir="rtl")=>put(ctx,blk(ctx,t,o),x,y,align,color,dir);
+function hline(ctx,y,w=4,x0=80,x1=1000,c=K.ink){ctx.fillStyle=c;ctx.fillRect(x0,y,x1-x0,w)}
+function bg(ctx,D){
+  ctx.fillStyle=K.bg;ctx.fillRect(0,0,1080,1920);
+  const glow=(cx,cy,r,c,a)=>{const g=ctx.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,c+Math.round(a*255).toString(16).padStart(2,"0"));g.addColorStop(1,c+"00");ctx.fillStyle=g;ctx.fillRect(0,0,1080,1920)};
+  glow(1000,180,760,K.ax[D.pr],K.glow);glow(60,1760,820,K.ax[(D.pr+3)%8],K.glow);
+}
+function head(ctx){
+  T(ctx,"قعدة صراحة — عجلة حياتك",1000,70,{w:640,size:30,min:24,weight:600,fam:FT},"right",K.mut);
+  T(ctx,DATE,80,72,{w:300,size:28,min:22,weight:500,fam:FM},"left",K.mut,"ltr");
+  hline(ctx,128);return 128;
+}
+function foot(ctx){
+  hline(ctx,1772);
+  T(ctx,"@eyad.hloubi",80,1812,{w:440,size:34,min:26,weight:500,fam:FM},"left",K.ink,"ltr");
+  T(ctx,"صار بدها قعدة.",1000,1808,{w:440,size:38,min:28,weight:800,fam:FD},"right",K.ink);
+}
+function rrp(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function photo(ctx,x,y,w,h,r=0){
+  ctx.save();if(r)rrp(ctx,x,y,w,h,r);else{ctx.beginPath();ctx.rect(x,y,w,h)}ctx.clip();
+  if(S.photo){const s=Math.max(w,h);ctx.drawImage(S.photo,x+(w-s)/2,y+(h-s)/2,s,s)}
+  else{ctx.fillStyle=K.ph;ctx.fillRect(x,y,w,h);const c=Math.min(w,h),cx=x+w/2,cy=y+h/2;
+    const v=[90,66,80,58,96,52,84,72];v.forEach((val,i)=>{const d=sec(cx,cy,0,c*.3*val/100,i*45,(i+1)*45);if(d){ctx.fillStyle=K.ax[i];ctx.globalAlpha=.85;ctx.fill(new Path2D(d))}});ctx.globalAlpha=1}
+  ctx.restore();
+}
+function swheel(ctx,cx,cy,R,m,pr){
+  ctx.fillStyle=K.card;ctx.beginPath();ctx.arc(cx,cy,R,0,7);ctx.fill();
+  ctx.strokeStyle=K.line;ctx.lineWidth=2;[.25,.5,.75].forEach(f=>{ctx.beginPath();ctx.arc(cx,cy,R*f,0,7);ctx.stroke()});
+  m.forEach((v,i)=>{const d=sec(cx,cy,0,R*v/100,i*45,(i+1)*45);if(d){ctx.fillStyle=K.ax[i];ctx.fill(new Path2D(d))}});
+  ctx.strokeStyle=K.card;ctx.lineWidth=Math.max(4,R/40);
+  for(let i=0;i<8;i++){const b=pol(cx,cy,R,i*45);ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(b[0],b[1]);ctx.stroke()}
+  ctx.strokeStyle=K.ink;ctx.lineWidth=3;ctx.beginPath();ctx.arc(cx,cy,R,0,7);ctx.stroke();
+  const a0=(pr*45-90+3)*Math.PI/180,a1=((pr+1)*45-90-3)*Math.PI/180;ctx.strokeStyle=K.acc;ctx.lineWidth=Math.max(10,R/18);ctx.lineCap="round";ctx.beginPath();ctx.arc(cx,cy,R+ctx.lineWidth,a0,a1);ctx.stroke();ctx.lineCap="butt";
+  ctx.lineWidth=3;ctx.strokeStyle=K.ink;ctx.fillStyle=K.bg;ctx.beginPath();ctx.arc(cx,cy,Math.max(8,R/22),0,7);ctx.fill();ctx.stroke();
+}
+/* صف المؤشرات: المعدل · التطابق · الأولوية */
+function kpis(ctx,y,D,x0=80,x1=1000){
+  hline(ctx,y,4,x0,x1);const w=(x1-x0)/3,top=y+24;let bot=top;
+  const cells=[["المعدل",String(D.avg),0],["التطابق مع إحساسك",D.fit+"%",0],["الأولوية",AX[D.pr].n,1]];
+  cells.forEach(([l,v,acc],k)=>{const xr=x1-k*w-(k?24:0);
+    let yy=T(ctx,l,xr,top,{w:w-40,size:28,min:20,weight:600,fam:FT},"right",K.mut)+16;
+    yy=T(ctx,v,xr,yy,acc?{w:w-40,size:52,min:34,weight:800,fam:FD}:{w:w-40,size:72,min:48,weight:800,fam:FD},"right",acc?K.acc:K.ink,acc?"rtl":"ltr");
+    bot=Math.max(bot,yy)});
+  ctx.fillStyle=K.line;for(let k=1;k<3;k++)ctx.fillRect(x1-k*w,y+18,2,bot-y-4);
+  bot+=24;hline(ctx,bot,2,x0,x1,K.line);return bot;
+}
+/* العجلة مع قائمة مرتّبة بجانبها */
+function wheelList(ctx,y,H,D){
+  const Dm=Math.max(300,Math.min(H-10,540)),cy=y+H/2;
+  swheel(ctx,80+Dm/2+14,cy,Dm/2-14,D.m,D.pr);
+  const order=D.m.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]);
+  const rowH=Math.min(64,Dm/8),lx=80+Dm+40,top=cy-rowH*4;
+  order.forEach(([v,i],r)=>{const yy=top+r*rowH,c=i===D.pr?K.acc:K.ink;
+    ctx.fillStyle=K.ax[i];ctx.beginPath();ctx.arc(988,yy+rowH/2-2,8,0,7);ctx.fill();
+    const n=blk(ctx,AX[i].n,{w:260,size:34,min:24,weight:600,fam:FT}),p=blk(ctx,String(v),{w:120,size:34,min:24,weight:500,fam:FM});
+    put(ctx,n,968,yy+(rowH-n.h)/2-4,"right",c);put(ctx,p,lx,yy+(rowH-p.h)/2-4,"left",i===D.pr?K.acc:K.ax[i],"ltr");
+    ctx.fillStyle=K.line;ctx.fillRect(lx,yy+rowH-3,1000-lx,2)});
+}
+/* شكل 1: غلاف */
+function layCover(ctx,D){
+  bg(ctx,D);let y=head(ctx)+30;
+  const nO={w:920,size:104,min:60,max:2,weight:800,fam:FD,gap:22},tO={w:920,size:50,min:36,max:2,weight:800,fam:FD};
+  const nh=D.name?blk(ctx,D.name,nO).h+26:0,th=blk(ctx,D.title,tO).h+34;
+  const ph=Math.round(Math.max(300,Math.min(500,1740-y-44-nh-th-250-540)));
+  photo(ctx,80,y,920,ph,22);y+=ph+44;
+  if(D.name)y=T(ctx,D.name,1000,y,nO)+26;
+  y=T(ctx,D.title,1000,y,tO,"right",K.acc)+34;
+  y=kpis(ctx,y,D)+30;
+  wheelList(ctx,y,1740-y,D);foot(ctx);
+}
+/* شكل 2: بولارويد */
+function layPol(ctx,D){
+  bg(ctx,D);head(ctx);
+  const fw=620,ph=540,fh=ph+40+(D.name?150:70),cx=540,cy=170+fh/2+10;
+  ctx.save();ctx.translate(cx,cy);ctx.rotate(-.04);
+  ctx.shadowColor="rgba(0,0,0,.25)";ctx.shadowBlur=46;ctx.shadowOffsetY=18;ctx.fillStyle=K.card;ctx.fillRect(-fw/2,-fh/2,fw,fh);ctx.shadowColor="transparent";
+  photo(ctx,-fw/2+40,-fh/2+40,fw-80,ph);
+  if(D.name)T(ctx,D.name,0,-fh/2+40+ph+36,{w:fw-90,size:62,min:36,max:1,weight:800,fam:FD},"center",K.ink);
+  else{ctx.fillStyle=K.acc;ctx.fillRect(-40,-fh/2+40+ph+30,80,6)}
+  ctx.restore();
+  let y=cy+fh/2+56;
+  y=T(ctx,D.title,540,y,{w:920,size:50,min:36,max:2,weight:800,fam:FD},"center",K.acc)+34;
+  y=kpis(ctx,y,D)+30;
+  wheelList(ctx,y,1740-y,D);foot(ctx);
+}
+/* شكل 3: بطاقة */
+function layCard(ctx,D){
+  bg(ctx,D);let y=head(ctx)+40;
+  const ps=300;photo(ctx,1000-ps,y,ps,ps,26);
+  let ty=y+10;
+  ty=T(ctx,"تقرير عجلة حياة",1000-ps-40,ty,{w:560,size:30,min:24,weight:600,fam:FT},"right",K.mut)+18;
+  if(D.name)ty=T(ctx,D.name,1000-ps-40,ty,{w:560,size:84,min:48,max:2,weight:800,fam:FD,gap:18})+20;
+  ty=T(ctx,D.title,1000-ps-40,ty,{w:560,size:42,min:30,max:2,weight:800,fam:FD},"right",K.acc);
+  y=Math.max(y+ps,ty)+40;
+  y=kpis(ctx,y,D)+30;
+  const avail=1740-y,Rr=Math.max(220,Math.min(320,avail/2-96)),cy=y+avail/2;
+  swheel(ctx,540,cy,Rr,D.m,D.pr);
+  D.m.forEach((v,i)=>{const [x,yy]=pol(540,cy,Rr+92,i*45+22.5),c=i===D.pr?K.acc:K.ink;
+    const n=blk(ctx,AX[i].n,{w:220,size:32,min:24,weight:600,fam:FT}),p=blk(ctx,String(v),{w:140,size:40,min:28,weight:500,fam:FM});
+    let t=yy-(n.h+10+p.h)/2;t=put(ctx,n,x,t,"center",c)+10;put(ctx,p,x,t,"center",i===D.pr?K.acc:K.ax[i],"ltr")});
+  foot(ctx);
+}
+const LAYS=[layCover,layPol,layCard];
+function saveStory(c){
+  c.toBlob(async b=>{
+    if(!b){toast("حدث خطأ، حاول مرة أخرى");return}
+    const file=new File([b],"qa3da-wheel.png",{type:"image/png"});
+    if(matchMedia("(pointer:coarse)").matches&&navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file]});return}catch(e){if(e.name==="AbortError")return}}
+    const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=file.name;document.body.appendChild(a);a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500);toast("حُفظت الصورة");
+  },"image/png");
+}
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),2200)}
+
+/* ============ الإحصائيات (كم شخص بدأ وأكمل، وأكثر نتيجة) ============ */
+const ONLINE=location.protocol.startsWith("http");
+function track(ev){if(!ONLINE||DEMO)return;try{fetch("api/event",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(ev),keepalive:true}).catch(()=>{})}catch(e){}}
+if(ONLINE&&"serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+
+/* ============ تشغيل ============ */
+applySkin(new URLSearchParams(location.search).get("skin")||"bold");paintTheme();render();
+window.__w={S,get STEPS(){return STEPS},go,newRun,Q,AXQ};
+</script>
+</body>
+</html>

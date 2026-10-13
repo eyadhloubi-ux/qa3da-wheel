@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>إحصائيات عجلة حياتك</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600;800&family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap">
+<style>
+:root{--paper:#FFFFFF;--sheet:#F6F6F4;--line:#E6E5E1;--ink:#0E0E10;--muted:#6A6A6E;--acc:#1F5E54;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#0E0F11;--sheet:#18191C;--line:#2A2B2F;--ink:#F2F1EE;--muted:#9B9BA0;--acc:#6BC1AE;color-scheme:dark}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;line-height:1.7}
+main{max-width:760px;margin:0 auto;padding:28px 16px 60px}
+h1{font-family:Alexandria,sans-serif;font-weight:800;font-size:30px}
+.k{font-size:13px;color:var(--muted);font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:1px solid var(--line);margin-top:18px}
+.kpi div{padding:12px 0;display:flex;flex-direction:column}
+.kpi div+div{border-right:1px solid var(--line);padding-right:12px}
+.kpi b{font-family:Alexandria,sans-serif;font-size:28px;font-weight:800}
+h2{font-family:Alexandria,sans-serif;font-size:18px;margin:28px 0 8px}
+.row{display:grid;grid-template-columns:170px 1fr 48px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px;font-weight:600}
+.t{height:10px;border-radius:3px;background:var(--sheet)}
+.t i{display:block;height:100%;border-radius:3px;background:var(--acc)}
+.n{text-align:left;font-variant-numeric:tabular-nums}
+.msg{margin-top:24px;padding:14px;border-radius:12px;background:var(--sheet)}
+@media (max-width:560px){.kpi{grid-template-columns:1fr 1fr}.kpi div:nth-child(3){border-right:0;padding-right:0}.row{grid-template-columns:110px 1fr 40px}}
+</style>
+</head>
+<body>
+<main>
+  <span class="k">قعدة صراحة · لوحة خاصة</span>
+  <h1>إحصائيات «عجلة حياتك»</h1>
+  <div id="out"><p class="msg">جارٍ التحميل…</p></div>
+</main>
+<script>
+const key=new URLSearchParams(location.search).get("key")||"";
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function list(o){const e=Object.entries(o).sort((a,b)=>b[1]-a[1]);const m=Math.max(1,...e.map(x=>x[1]));
+  return e.length?e.map(([k,v])=>`<div class="row"><span>${esc(k)}</span><span class="t"><i style="width:${100*v/m}%"></i></span><span class="n">${v}</span></div>`).join(""):`<p class="msg">لا توجد بيانات بعد.</p>`}
+fetch("api/stats"+(key?"?key="+encodeURIComponent(key):"")).then(r=>{if(r.status===401)throw 0;return r.json()}).then(S=>{
+  const rate=S.starts?Math.round(100*S.completes/S.starts):0,fit=S.fit.n?Math.round(S.fit.sum/S.fit.n):0;
+  const top=Object.entries(S.types).sort((a,b)=>b[1]-a[1])[0];
+  const days=Object.entries(S.days).sort((a,b)=>a[0]<b[0]?1:-1).slice(0,14);
+  document.getElementById("out").innerHTML=`
+  <div class="kpi"><div><span class="k">بدؤوا</span><b>${S.starts}</b></div><div><span class="k">أكملوا</span><b>${S.completes}</b></div><div><span class="k">نسبة الإكمال</span><b>${rate}%</b></div><div><span class="k">متوسط التطابق</span><b>${fit}%</b></div></div>
+  <p class="k" style="margin-top:10px">أكثر نتيجة: ${top?esc(top[0]):"—"} · منذ ${new Date(S.since).toLocaleDateString("ar-SY-u-nu-latn")}</p>
+  <h2>النتائج</h2>${list(S.types)}
+  <h2>الأولوية الأكثر اختياراً</h2>${list(S.priorities)}
+  <h2>آخر 14 يوماً (أكملوا)</h2>${list(Object.fromEntries(days.map(([d,v])=>[d,v.c])))}`;
+}).catch(()=>{document.getElementById("out").innerHTML=`<p class="msg">هذه الصفحة تحتاج مفتاحاً. افتحها بالشكل: /stats?key=المفتاح</p>`});
+</script>
+</body>
+</html>
